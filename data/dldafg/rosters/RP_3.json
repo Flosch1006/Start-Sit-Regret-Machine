@@ -1,0 +1,633 @@
+[
+    {
+        "status": "Active",
+        "team": "DET",
+        "player": "J. Goff",
+        "positions": [
+            "QWRT",
+            "QB"
+        ],
+        "points": 12.7,
+        "perfect": null
+    },
+    {
+        "status": "Active",
+        "team": "PHI",
+        "player": "S. Barkley",
+        "positions": [
+            "RWT",
+            "RB",
+            "QWRT"
+        ],
+        "points": 7.5,
+        "perfect": null
+    },
+    {
+        "status": "Active",
+        "team": "SF",
+        "player": "C. McCaffrey",
+        "positions": [
+            "RWT",
+            "RB",
+            "QWRT"
+        ],
+        "points": 19.0,
+        "perfect": "RB1"
+    },
+    {
+        "status": "Active",
+        "team": "LAR",
+        "player": "D. Adams",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "WR"
+        ],
+        "points": 14.1,
+        "perfect": "WR1"
+    },
+    {
+        "status": "Active",
+        "team": "TB",
+        "player": "M. Evans",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "WR"
+        ],
+        "points": 11.3,
+        "perfect": "WR3"
+    },
+    {
+        "status": "Active",
+        "team": "MIA",
+        "player": "T. Hill",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "WR"
+        ],
+        "points": 13.4,
+        "perfect": "WR2"
+    },
+    {
+        "status": "Active",
+        "team": "KC",
+        "player": "T. Kelce",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "TE"
+        ],
+        "points": 4.6,
+        "perfect": "TE2"
+    },
+    {
+        "status": "Active",
+        "team": "GB",
+        "player": "T. Kraft",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "TE"
+        ],
+        "points": 4.4,
+        "perfect": null
+    },
+    {
+        "status": "Active",
+        "team": "CAR",
+        "player": "C. Hubbard",
+        "positions": [
+            "RWT",
+            "RB",
+            "QWRT"
+        ],
+        "points": 8.6,
+        "perfect": "RWT2"
+    },
+    {
+        "status": "Active",
+        "team": "DAL",
+        "player": "J. Williams",
+        "positions": [
+            "RWT",
+            "RB",
+            "QWRT"
+        ],
+        "points": 10.7,
+        "perfect": "RB2"
+    },
+    {
+        "status": "Active",
+        "team": "ARI",
+        "player": "K. Murray",
+        "positions": [
+            "QWRT",
+            "QB"
+        ],
+        "points": 15.65,
+        "perfect": "QWRT1"
+    },
+    {
+        "status": "Bench",
+        "team": "NO",
+        "player": "S. Rattler",
+        "positions": [
+            "QWRT",
+            "QB"
+        ],
+        "points": 13.9,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "LAR",
+        "player": "M. Stafford",
+        "positions": [
+            "QWRT",
+            "QB"
+        ],
+        "points": 15.8,
+        "perfect": "QB1"
+    },
+    {
+        "status": "Bench",
+        "team": "SEA",
+        "player": "G. Holani",
+        "positions": [
+            "RWT",
+            "RB",
+            "QWRT"
+        ],
+        "points": 3.2,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "BAL",
+        "player": "K. Mitchell",
+        "positions": [
+            "RWT",
+            "RB",
+            "QWRT"
+        ],
+        "points": 0.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "TB",
+        "player": "R. White",
+        "positions": [
+            "RWT",
+            "RB",
+            "QWRT"
+        ],
+        "points": 1.9,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "NE",
+        "player": "S. Diggs",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "WR"
+        ],
+        "points": 3.8,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "SF",
+        "player": "J. Jennings",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "WR"
+        ],
+        "points": 0.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "WAS",
+        "player": "T. McLaurin",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "WR"
+        ],
+        "points": 8.9,
+        "perfect": "RWT1"
+    },
+    {
+        "status": "Bench",
+        "team": "NO",
+        "player": "D. Vele",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "WR"
+        ],
+        "points": 0.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "LAR",
+        "player": "J. Whittington",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "WR"
+        ],
+        "points": 2.4,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "BAL",
+        "player": "M. Andrews",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "TE"
+        ],
+        "points": 24.1,
+        "perfect": "TE1"
+    },
+    {
+        "status": "Bench",
+        "team": "NYG",
+        "player": "D. Bellinger",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "TE"
+        ],
+        "points": 1.1,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "TB",
+        "player": "P. Durham",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "TE"
+        ],
+        "points": 0.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "CHI",
+        "player": "C. Loveland",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "TE"
+        ],
+        "points": 3.6,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "PIT",
+        "player": "J. Smith",
+        "positions": [
+            "QWRT",
+            "RWT",
+            "TE"
+        ],
+        "points": 1.8,
+        "perfect": null
+    },
+    {
+        "status": "Active",
+        "team": "MIN",
+        "player": "J. Greenard",
+        "positions": [
+            "DE",
+            "LB",
+            "ID",
+            "DL"
+        ],
+        "points": 7.0,
+        "perfect": "DL1"
+    },
+    {
+        "status": "Active",
+        "team": "PIT",
+        "player": "C. Heyward",
+        "positions": [
+            "DT",
+            "ID",
+            "DL"
+        ],
+        "points": 18.0,
+        "perfect": "DT1"
+    },
+    {
+        "status": "Active",
+        "team": "IND",
+        "player": "D. Buckner",
+        "positions": [
+            "DT",
+            "ID",
+            "DL"
+        ],
+        "points": 5.0,
+        "perfect": null
+    },
+    {
+        "status": "Active",
+        "team": "TB",
+        "player": "L. David",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 19.0,
+        "perfect": "LB1"
+    },
+    {
+        "status": "Active",
+        "team": "NO",
+        "player": "D. Davis",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 13.0,
+        "perfect": "LB2"
+    },
+    {
+        "status": "Active",
+        "team": "NYJ",
+        "player": "Q. Williams",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 12.0,
+        "perfect": "LB3"
+    },
+    {
+        "status": "Active",
+        "team": "IND",
+        "player": "K. Moore",
+        "positions": [
+            "ID",
+            "DB",
+            "CB"
+        ],
+        "points": 17.0,
+        "perfect": "CB1"
+    },
+    {
+        "status": "Active",
+        "team": "HOU",
+        "player": "D. Stingley Jr.",
+        "positions": [
+            "ID",
+            "DB",
+            "CB"
+        ],
+        "points": 3.0,
+        "perfect": null
+    },
+    {
+        "status": "Active",
+        "team": "NYG",
+        "player": "D. Belton",
+        "positions": [
+            "ID",
+            "DB",
+            "CB",
+            "S"
+        ],
+        "points": 2.0,
+        "perfect": null
+    },
+    {
+        "status": "Active",
+        "team": "LAC",
+        "player": "D. James",
+        "positions": [
+            "ID",
+            "DB",
+            "S"
+        ],
+        "points": 26.0,
+        "perfect": "S1"
+    },
+    {
+        "status": "Active",
+        "team": "LAR",
+        "player": "N. Landman",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 5.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "MIN",
+        "player": "J. Allen",
+        "positions": [
+            "DE",
+            "DT",
+            "ID",
+            "DL"
+        ],
+        "points": 5.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "LV",
+        "player": "M. Koonce",
+        "positions": [
+            "DE",
+            "ID",
+            "DL"
+        ],
+        "points": 0.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "DEN",
+        "player": "J. Elliss",
+        "positions": [
+            "DE",
+            "LB",
+            "ID",
+            "DL"
+        ],
+        "points": 9.0,
+        "perfect": "DE1"
+    },
+    {
+        "status": "Bench",
+        "team": "SEA",
+        "player": "D. Lawrence",
+        "positions": [
+            "DE",
+            "LB",
+            "ID",
+            "DL"
+        ],
+        "points": 2.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "JAX",
+        "player": "V. Miller",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 1.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "DAL",
+        "player": "J. Sanborn",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 7.0,
+        "perfect": "ID1"
+    },
+    {
+        "status": "Bench",
+        "team": "LAR",
+        "player": "O. Speights",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 4.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "LAR",
+        "player": "J. Stewart",
+        "positions": [
+            "DE",
+            "LB",
+            "ID",
+            "DL"
+        ],
+        "points": 0.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "LAC",
+        "player": "T. Tuipulotu",
+        "positions": [
+            "LB",
+            "DT",
+            "ID",
+            "DE",
+            "DL"
+        ],
+        "points": 2.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "PIT",
+        "player": "J. Ramsey",
+        "positions": [
+            "ID",
+            "DB",
+            "CB"
+        ],
+        "points": 1.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "SEA",
+        "player": "J. Love",
+        "positions": [
+            "ID",
+            "DB",
+            "S"
+        ],
+        "points": 0.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "MIA",
+        "player": "I. Melifonwu",
+        "positions": [
+            "ID",
+            "DB",
+            "CB",
+            "S"
+        ],
+        "points": 0.0,
+        "perfect": null
+    },
+    {
+        "status": "Bench",
+        "team": "GB",
+        "player": "E. Williams",
+        "positions": [
+            "ID",
+            "DB",
+            "CB",
+            "S"
+        ],
+        "points": 6.0,
+        "perfect": "CB2"
+    },
+    {
+        "status": "Bench",
+        "team": "NE",
+        "player": "C. Woodson",
+        "positions": [
+            "ID",
+            "DB",
+            "S"
+        ],
+        "points": 4.0,
+        "perfect": "S2"
+    },
+    {
+        "status": "Active",
+        "team": "IND",
+        "player": "S. Shrader",
+        "positions": [
+            "K"
+        ],
+        "points": 9.0,
+        "perfect": "K1"
+    },
+    {
+        "status": "Bench",
+        "team": "CHI",
+        "player": "C. Santos",
+        "positions": [
+            "K"
+        ],
+        "points": 6.0,
+        "perfect": null
+    }
+]

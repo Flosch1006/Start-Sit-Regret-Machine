@@ -1,0 +1,72 @@
+[
+    {
+        "Team": "Sascha",
+        "period": "Week 6",
+        "actual": 280.2,
+        "perfect": 295.6,
+        "delta": 15.4
+    },
+    {
+        "Team": "SD!",
+        "period": "Week 6",
+        "actual": 358.8,
+        "perfect": 426.65,
+        "delta": 67.85
+    },
+    {
+        "Team": "HeHy",
+        "period": "Week 6",
+        "actual": 331.15,
+        "perfect": 399.5,
+        "delta": 68.35
+    },
+    {
+        "Team": "LC",
+        "period": "Week 6",
+        "actual": 250.1,
+        "perfect": 260.35,
+        "delta": 10.25
+    },
+    {
+        "Team": "BB",
+        "period": "Week 6",
+        "actual": 271.6,
+        "perfect": 319.0,
+        "delta": 47.4
+    },
+    {
+        "Team": "Sunkings",
+        "period": "Week 6",
+        "actual": 307.1,
+        "perfect": 364.5,
+        "delta": 57.4
+    },
+    {
+        "Team": "Falcons",
+        "period": "Week 6",
+        "actual": 236.05,
+        "perfect": 299.35,
+        "delta": 63.3
+    },
+    {
+        "Team": "TKU",
+        "period": "Week 6",
+        "actual": 351.85,
+        "perfect": 450.65,
+        "delta": 98.8
+    },
+    {
+        "Team": "Sturm",
+        "period": "Week 6",
+        "actual": 380.55,
+        "perfect": 419.35,
+        "delta": 38.8
+    },
+    {
+        "Team": "Emin",
+        "period": "Week 6",
+        "actual": 337.3,
+        "perfect": 422.85,
+        "delta": 85.55
+    }
+]

@@ -1,0 +1,7 @@
+altair
+tqdm
+streamlit
+pandas
+requests
+beautifulsoup4
+matplotlib

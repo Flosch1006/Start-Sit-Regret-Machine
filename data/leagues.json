@@ -1,0 +1,47 @@
+{
+    "DLDAFG": {
+        "id": "mgu5x8u8m8sjsjxf",
+        "short_name": "dldafg",
+        "roster": {
+            "QB": 1,
+            "RB": 2,
+            "WR": 3,
+            "TE": 2,
+            "RWT": 2,
+            "QWRT": 1,
+            "DE": 1,
+            "DT": 1,
+            "DL": 1,
+            "LB": 3,
+            "CB": 2,
+            "S": 2,
+            "ID": 1,
+            "K": 1
+        },
+        "result_height": 39,
+        "reg_season_end": 14,
+        "matchup_df_height": 37,
+        "scraper_progress": 10
+    },
+    "Devil Dynasty": {
+        "id": "04gpg5scm5l7gb1s",
+        "short_name": "devil",
+        "roster": {
+            "QB": 2,
+            "RB": 2,
+            "WR": 4,
+            "TE": 2,
+            "RWT": 2,
+            "DT": 3,
+            "LB": 3,
+            "ER": 3,
+            "CB": 2,
+            "S": 2,
+            "DB": 1
+        },
+        "result_height": 39,
+        "reg_season_end": 14,
+        "matchup_df_height": 37,
+        "scraper_progress": 10
+    }
+}

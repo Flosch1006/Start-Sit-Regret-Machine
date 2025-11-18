@@ -1,0 +1,492 @@
+[
+    {
+        "period": 1,
+        "home_team_id": "e4hcfl0fm5l7gb43",
+        "home_team_name": "Sturm Fetzen",
+        "away_team_id": "wf26fpuhm5l7gb3r",
+        "away_team_name": "The Kraken Universe"
+    },
+    {
+        "period": 1,
+        "home_team_id": "ekdusyqum5l7gb3x",
+        "home_team_name": "Bursa Butchers",
+        "away_team_id": "5szdjo7gm5l7gb41",
+        "away_team_name": "Sympathy for the D!"
+    },
+    {
+        "period": 1,
+        "home_team_id": "mztwf3dxm5l7gb45",
+        "home_team_name": "Mephisto Hunters",
+        "away_team_id": "dhktml8qm5l7gb46",
+        "away_team_name": "Bichl Burschen"
+    },
+    {
+        "period": 1,
+        "home_team_id": "c3g7jf66m5l7gb3t",
+        "home_team_name": "Hellfire Hyenas",
+        "away_team_id": "ei7mz6xam5l7gb3o",
+        "away_team_name": "Riesen Lubu"
+    },
+    {
+        "period": 1,
+        "home_team_id": "jtq6pqvgm5l7gb3v",
+        "home_team_name": "Luzifers Boys",
+        "away_team_id": "xcmjv2zqm5l7gb3z",
+        "away_team_name": "Minnesota Sunkings"
+    },
+    {
+        "period": 2,
+        "home_team_id": "wf26fpuhm5l7gb3r",
+        "home_team_name": "The Kraken Universe",
+        "away_team_id": "ekdusyqum5l7gb3x",
+        "away_team_name": "Bursa Butchers"
+    },
+    {
+        "period": 2,
+        "home_team_id": "e4hcfl0fm5l7gb43",
+        "home_team_name": "Sturm Fetzen",
+        "away_team_id": "jtq6pqvgm5l7gb3v",
+        "away_team_name": "Luzifers Boys"
+    },
+    {
+        "period": 2,
+        "home_team_id": "5szdjo7gm5l7gb41",
+        "home_team_name": "Sympathy for the D!",
+        "away_team_id": "c3g7jf66m5l7gb3t",
+        "away_team_name": "Hellfire Hyenas"
+    },
+    {
+        "period": 2,
+        "home_team_id": "mztwf3dxm5l7gb45",
+        "home_team_name": "Mephisto Hunters",
+        "away_team_id": "xcmjv2zqm5l7gb3z",
+        "away_team_name": "Minnesota Sunkings"
+    },
+    {
+        "period": 2,
+        "home_team_id": "ei7mz6xam5l7gb3o",
+        "home_team_name": "Riesen Lubu",
+        "away_team_id": "dhktml8qm5l7gb46",
+        "away_team_name": "Bichl Burschen"
+    },
+    {
+        "period": 3,
+        "home_team_id": "mztwf3dxm5l7gb45",
+        "home_team_name": "Mephisto Hunters",
+        "away_team_id": "e4hcfl0fm5l7gb43",
+        "away_team_name": "Sturm Fetzen"
+    },
+    {
+        "period": 3,
+        "home_team_id": "c3g7jf66m5l7gb3t",
+        "home_team_name": "Hellfire Hyenas",
+        "away_team_id": "ekdusyqum5l7gb3x",
+        "away_team_name": "Bursa Butchers"
+    },
+    {
+        "period": 3,
+        "home_team_id": "jtq6pqvgm5l7gb3v",
+        "home_team_name": "Luzifers Boys",
+        "away_team_id": "ei7mz6xam5l7gb3o",
+        "away_team_name": "Riesen Lubu"
+    },
+    {
+        "period": 3,
+        "home_team_id": "xcmjv2zqm5l7gb3z",
+        "home_team_name": "Minnesota Sunkings",
+        "away_team_id": "wf26fpuhm5l7gb3r",
+        "away_team_name": "The Kraken Universe"
+    },
+    {
+        "period": 3,
+        "home_team_id": "5szdjo7gm5l7gb41",
+        "home_team_name": "Sympathy for the D!",
+        "away_team_id": "dhktml8qm5l7gb46",
+        "away_team_name": "Bichl Burschen"
+    },
+    {
+        "period": 4,
+        "home_team_id": "wf26fpuhm5l7gb3r",
+        "home_team_name": "The Kraken Universe",
+        "away_team_id": "c3g7jf66m5l7gb3t",
+        "away_team_name": "Hellfire Hyenas"
+    },
+    {
+        "period": 4,
+        "home_team_id": "mztwf3dxm5l7gb45",
+        "home_team_name": "Mephisto Hunters",
+        "away_team_id": "ekdusyqum5l7gb3x",
+        "away_team_name": "Bursa Butchers"
+    },
+    {
+        "period": 4,
+        "home_team_id": "dhktml8qm5l7gb46",
+        "home_team_name": "Bichl Burschen",
+        "away_team_id": "xcmjv2zqm5l7gb3z",
+        "away_team_name": "Minnesota Sunkings"
+    },
+    {
+        "period": 4,
+        "home_team_id": "e4hcfl0fm5l7gb43",
+        "home_team_name": "Sturm Fetzen",
+        "away_team_id": "ei7mz6xam5l7gb3o",
+        "away_team_name": "Riesen Lubu"
+    },
+    {
+        "period": 4,
+        "home_team_id": "5szdjo7gm5l7gb41",
+        "home_team_name": "Sympathy for the D!",
+        "away_team_id": "jtq6pqvgm5l7gb3v",
+        "away_team_name": "Luzifers Boys"
+    },
+    {
+        "period": 5,
+        "home_team_id": "jtq6pqvgm5l7gb3v",
+        "home_team_name": "Luzifers Boys",
+        "away_team_id": "wf26fpuhm5l7gb3r",
+        "away_team_name": "The Kraken Universe"
+    },
+    {
+        "period": 5,
+        "home_team_id": "xcmjv2zqm5l7gb3z",
+        "home_team_name": "Minnesota Sunkings",
+        "away_team_id": "c3g7jf66m5l7gb3t",
+        "away_team_name": "Hellfire Hyenas"
+    },
+    {
+        "period": 5,
+        "home_team_id": "ei7mz6xam5l7gb3o",
+        "home_team_name": "Riesen Lubu",
+        "away_team_id": "mztwf3dxm5l7gb45",
+        "away_team_name": "Mephisto Hunters"
+    },
+    {
+        "period": 5,
+        "home_team_id": "dhktml8qm5l7gb46",
+        "home_team_name": "Bichl Burschen",
+        "away_team_id": "ekdusyqum5l7gb3x",
+        "away_team_name": "Bursa Butchers"
+    },
+    {
+        "period": 5,
+        "home_team_id": "5szdjo7gm5l7gb41",
+        "home_team_name": "Sympathy for the D!",
+        "away_team_id": "e4hcfl0fm5l7gb43",
+        "away_team_name": "Sturm Fetzen"
+    },
+    {
+        "period": 6,
+        "home_team_id": "wf26fpuhm5l7gb3r",
+        "home_team_name": "The Kraken Universe",
+        "away_team_id": "xcmjv2zqm5l7gb3z",
+        "away_team_name": "Minnesota Sunkings"
+    },
+    {
+        "period": 6,
+        "home_team_id": "jtq6pqvgm5l7gb3v",
+        "home_team_name": "Luzifers Boys",
+        "away_team_id": "ei7mz6xam5l7gb3o",
+        "away_team_name": "Riesen Lubu"
+    },
+    {
+        "period": 6,
+        "home_team_id": "c3g7jf66m5l7gb3t",
+        "home_team_name": "Hellfire Hyenas",
+        "away_team_id": "dhktml8qm5l7gb46",
+        "away_team_name": "Bichl Burschen"
+    },
+    {
+        "period": 6,
+        "home_team_id": "mztwf3dxm5l7gb45",
+        "home_team_name": "Mephisto Hunters",
+        "away_team_id": "5szdjo7gm5l7gb41",
+        "away_team_name": "Sympathy for the D!"
+    },
+    {
+        "period": 6,
+        "home_team_id": "ekdusyqum5l7gb3x",
+        "home_team_name": "Bursa Butchers",
+        "away_team_id": "e4hcfl0fm5l7gb43",
+        "away_team_name": "Sturm Fetzen"
+    },
+    {
+        "period": 7,
+        "home_team_id": "ei7mz6xam5l7gb3o",
+        "home_team_name": "Riesen Lubu",
+        "away_team_id": "wf26fpuhm5l7gb3r",
+        "away_team_name": "The Kraken Universe"
+    },
+    {
+        "period": 7,
+        "home_team_id": "dhktml8qm5l7gb46",
+        "home_team_name": "Bichl Burschen",
+        "away_team_id": "xcmjv2zqm5l7gb3z",
+        "away_team_name": "Minnesota Sunkings"
+    },
+    {
+        "period": 7,
+        "home_team_id": "5szdjo7gm5l7gb41",
+        "home_team_name": "Sympathy for the D!",
+        "away_team_id": "jtq6pqvgm5l7gb3v",
+        "away_team_name": "Luzifers Boys"
+    },
+    {
+        "period": 7,
+        "home_team_id": "e4hcfl0fm5l7gb43",
+        "home_team_name": "Sturm Fetzen",
+        "away_team_id": "c3g7jf66m5l7gb3t",
+        "away_team_name": "Hellfire Hyenas"
+    },
+    {
+        "period": 7,
+        "home_team_id": "ekdusyqum5l7gb3x",
+        "home_team_name": "Bursa Butchers",
+        "away_team_id": "mztwf3dxm5l7gb45",
+        "away_team_name": "Mephisto Hunters"
+    },
+    {
+        "period": 8,
+        "home_team_id": "wf26fpuhm5l7gb3r",
+        "home_team_name": "The Kraken Universe",
+        "away_team_id": "dhktml8qm5l7gb46",
+        "away_team_name": "Bichl Burschen"
+    },
+    {
+        "period": 8,
+        "home_team_id": "ei7mz6xam5l7gb3o",
+        "home_team_name": "Riesen Lubu",
+        "away_team_id": "5szdjo7gm5l7gb41",
+        "away_team_name": "Sympathy for the D!"
+    },
+    {
+        "period": 8,
+        "home_team_id": "xcmjv2zqm5l7gb3z",
+        "home_team_name": "Minnesota Sunkings",
+        "away_team_id": "e4hcfl0fm5l7gb43",
+        "away_team_name": "Sturm Fetzen"
+    },
+    {
+        "period": 8,
+        "home_team_id": "jtq6pqvgm5l7gb3v",
+        "home_team_name": "Luzifers Boys",
+        "away_team_id": "ekdusyqum5l7gb3x",
+        "away_team_name": "Bursa Butchers"
+    },
+    {
+        "period": 8,
+        "home_team_id": "c3g7jf66m5l7gb3t",
+        "home_team_name": "Hellfire Hyenas",
+        "away_team_id": "mztwf3dxm5l7gb45",
+        "away_team_name": "Mephisto Hunters"
+    },
+    {
+        "period": 9,
+        "home_team_id": "5szdjo7gm5l7gb41",
+        "home_team_name": "Sympathy for the D!",
+        "away_team_id": "wf26fpuhm5l7gb3r",
+        "away_team_name": "The Kraken Universe"
+    },
+    {
+        "period": 9,
+        "home_team_id": "e4hcfl0fm5l7gb43",
+        "home_team_name": "Sturm Fetzen",
+        "away_team_id": "dhktml8qm5l7gb46",
+        "away_team_name": "Bichl Burschen"
+    },
+    {
+        "period": 9,
+        "home_team_id": "ekdusyqum5l7gb3x",
+        "home_team_name": "Bursa Butchers",
+        "away_team_id": "ei7mz6xam5l7gb3o",
+        "away_team_name": "Riesen Lubu"
+    },
+    {
+        "period": 9,
+        "home_team_id": "mztwf3dxm5l7gb45",
+        "home_team_name": "Mephisto Hunters",
+        "away_team_id": "xcmjv2zqm5l7gb3z",
+        "away_team_name": "Minnesota Sunkings"
+    },
+    {
+        "period": 9,
+        "home_team_id": "c3g7jf66m5l7gb3t",
+        "home_team_name": "Hellfire Hyenas",
+        "away_team_id": "jtq6pqvgm5l7gb3v",
+        "away_team_name": "Luzifers Boys"
+    },
+    {
+        "period": 10,
+        "home_team_id": "wf26fpuhm5l7gb3r",
+        "home_team_name": "The Kraken Universe",
+        "away_team_id": "e4hcfl0fm5l7gb43",
+        "away_team_name": "Sturm Fetzen"
+    },
+    {
+        "period": 10,
+        "home_team_id": "5szdjo7gm5l7gb41",
+        "home_team_name": "Sympathy for the D!",
+        "away_team_id": "ekdusyqum5l7gb3x",
+        "away_team_name": "Bursa Butchers"
+    },
+    {
+        "period": 10,
+        "home_team_id": "dhktml8qm5l7gb46",
+        "home_team_name": "Bichl Burschen",
+        "away_team_id": "mztwf3dxm5l7gb45",
+        "away_team_name": "Mephisto Hunters"
+    },
+    {
+        "period": 10,
+        "home_team_id": "ei7mz6xam5l7gb3o",
+        "home_team_name": "Riesen Lubu",
+        "away_team_id": "c3g7jf66m5l7gb3t",
+        "away_team_name": "Hellfire Hyenas"
+    },
+    {
+        "period": 10,
+        "home_team_id": "xcmjv2zqm5l7gb3z",
+        "home_team_name": "Minnesota Sunkings",
+        "away_team_id": "jtq6pqvgm5l7gb3v",
+        "away_team_name": "Luzifers Boys"
+    },
+    {
+        "period": 11,
+        "home_team_id": "ekdusyqum5l7gb3x",
+        "home_team_name": "Bursa Butchers",
+        "away_team_id": "wf26fpuhm5l7gb3r",
+        "away_team_name": "The Kraken Universe"
+    },
+    {
+        "period": 11,
+        "home_team_id": "mztwf3dxm5l7gb45",
+        "home_team_name": "Mephisto Hunters",
+        "away_team_id": "e4hcfl0fm5l7gb43",
+        "away_team_name": "Sturm Fetzen"
+    },
+    {
+        "period": 11,
+        "home_team_id": "c3g7jf66m5l7gb3t",
+        "home_team_name": "Hellfire Hyenas",
+        "away_team_id": "5szdjo7gm5l7gb41",
+        "away_team_name": "Sympathy for the D!"
+    },
+    {
+        "period": 11,
+        "home_team_id": "jtq6pqvgm5l7gb3v",
+        "home_team_name": "Luzifers Boys",
+        "away_team_id": "dhktml8qm5l7gb46",
+        "away_team_name": "Bichl Burschen"
+    },
+    {
+        "period": 11,
+        "home_team_id": "xcmjv2zqm5l7gb3z",
+        "home_team_name": "Minnesota Sunkings",
+        "away_team_id": "ei7mz6xam5l7gb3o",
+        "away_team_name": "Riesen Lubu"
+    },
+    {
+        "period": 12,
+        "home_team_id": "wf26fpuhm5l7gb3r",
+        "home_team_name": "The Kraken Universe",
+        "away_team_id": "mztwf3dxm5l7gb45",
+        "away_team_name": "Mephisto Hunters"
+    },
+    {
+        "period": 12,
+        "home_team_id": "ekdusyqum5l7gb3x",
+        "home_team_name": "Bursa Butchers",
+        "away_team_id": "c3g7jf66m5l7gb3t",
+        "away_team_name": "Hellfire Hyenas"
+    },
+    {
+        "period": 12,
+        "home_team_id": "e4hcfl0fm5l7gb43",
+        "home_team_name": "Sturm Fetzen",
+        "away_team_id": "jtq6pqvgm5l7gb3v",
+        "away_team_name": "Luzifers Boys"
+    },
+    {
+        "period": 12,
+        "home_team_id": "5szdjo7gm5l7gb41",
+        "home_team_name": "Sympathy for the D!",
+        "away_team_id": "xcmjv2zqm5l7gb3z",
+        "away_team_name": "Minnesota Sunkings"
+    },
+    {
+        "period": 12,
+        "home_team_id": "dhktml8qm5l7gb46",
+        "home_team_name": "Bichl Burschen",
+        "away_team_id": "ei7mz6xam5l7gb3o",
+        "away_team_name": "Riesen Lubu"
+    },
+    {
+        "period": 13,
+        "home_team_id": "c3g7jf66m5l7gb3t",
+        "home_team_name": "Hellfire Hyenas",
+        "away_team_id": "wf26fpuhm5l7gb3r",
+        "away_team_name": "The Kraken Universe"
+    },
+    {
+        "period": 13,
+        "home_team_id": "jtq6pqvgm5l7gb3v",
+        "home_team_name": "Luzifers Boys",
+        "away_team_id": "mztwf3dxm5l7gb45",
+        "away_team_name": "Mephisto Hunters"
+    },
+    {
+        "period": 13,
+        "home_team_id": "xcmjv2zqm5l7gb3z",
+        "home_team_name": "Minnesota Sunkings",
+        "away_team_id": "ekdusyqum5l7gb3x",
+        "away_team_name": "Bursa Butchers"
+    },
+    {
+        "period": 13,
+        "home_team_id": "ei7mz6xam5l7gb3o",
+        "home_team_name": "Riesen Lubu",
+        "away_team_id": "e4hcfl0fm5l7gb43",
+        "away_team_name": "Sturm Fetzen"
+    },
+    {
+        "period": 13,
+        "home_team_id": "dhktml8qm5l7gb46",
+        "home_team_name": "Bichl Burschen",
+        "away_team_id": "5szdjo7gm5l7gb41",
+        "away_team_name": "Sympathy for the D!"
+    },
+    {
+        "period": 14,
+        "home_team_id": "wf26fpuhm5l7gb3r",
+        "home_team_name": "The Kraken Universe",
+        "away_team_id": "jtq6pqvgm5l7gb3v",
+        "away_team_name": "Luzifers Boys"
+    },
+    {
+        "period": 14,
+        "home_team_id": "c3g7jf66m5l7gb3t",
+        "home_team_name": "Hellfire Hyenas",
+        "away_team_id": "xcmjv2zqm5l7gb3z",
+        "away_team_name": "Minnesota Sunkings"
+    },
+    {
+        "period": 14,
+        "home_team_id": "mztwf3dxm5l7gb45",
+        "home_team_name": "Mephisto Hunters",
+        "away_team_id": "ei7mz6xam5l7gb3o",
+        "away_team_name": "Riesen Lubu"
+    },
+    {
+        "period": 14,
+        "home_team_id": "ekdusyqum5l7gb3x",
+        "home_team_name": "Bursa Butchers",
+        "away_team_id": "dhktml8qm5l7gb46",
+        "away_team_name": "Bichl Burschen"
+    },
+    {
+        "period": 14,
+        "home_team_id": "e4hcfl0fm5l7gb43",
+        "home_team_name": "Sturm Fetzen",
+        "away_team_id": "5szdjo7gm5l7gb41",
+        "away_team_name": "Sympathy for the D!"
+    }
+]
