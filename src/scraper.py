@@ -357,5 +357,7 @@ if current_week:
                 update[name]["scraper_progress"] = current_week
                 with open(os.path.join(DATA_DIR, "leagues.json"), "w") as f:
                     json.dump(update, f, indent=4)
-else:
-    print("Nothing to do")
+        else:
+            print("Nothing to do")
+            print("Current week:", current_week)
+            print("Scraper progress for league:", league["scraper_progress"])
