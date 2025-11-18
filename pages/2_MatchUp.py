@@ -22,6 +22,10 @@ st.session_state["selected_week"] = week
 
 # load teams and schedule
 teams = load_teams(league_info["short_name"])
+if "emoji" in teams.columns:
+    emoji_map = teams.set_index("id")["emoji"].to_dict()
+else:
+    emoji_map = {}
 schedule = load_schedule(league_info["short_name"])
 
 # filter to selected week only
@@ -148,7 +152,7 @@ away_styled = highlight_actual(away_roster_frame)
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader(f"🏠 {home_team}")
+    st.subheader(f"{emoji_map.get(home_team_id, '🏠')} {home_team}")
     st.dataframe(
         home_styled,
         hide_index=True,
@@ -157,7 +161,7 @@ with col1:
     )
 
 with col2:
-    st.subheader(f"✈️ {away_team}")
+    st.subheader(f"{emoji_map.get(away_team_id, '✈️')} {away_team}")
     st.dataframe(
         away_styled,
         hide_index=True,
