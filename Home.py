@@ -119,7 +119,7 @@ results = results[[
 ]].sort_values(["win_perfect", "perfect_points"], ascending=False)
 
 # calculate deltas
-results["delta_points"] = (results["perfect_points"] - results["actual_points"]) / week
+results["delta_points"] = round((results["perfect_points"] - results["actual_points"]) / week, 2)
 chart = alt.Chart(
     results.sort_values(["win_perfect", "perfect_points"], ascending=False).reset_index()[["team", "delta_points"]]).mark_bar().encode(
     x=alt.X("delta_points:Q", title="Points Lost vs Perfect Lineup"),
