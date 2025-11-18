@@ -4,6 +4,8 @@ import streamlit as st
 import pandas as pd
 from src.data_loader import load_schedule, load_teams, load_leagues, load_roster
 
+st.set_page_config(page_title="MatchUp Analysis", page_icon="🏈")
+
 # load leagues
 leagues = load_leagues()
 
@@ -13,7 +15,6 @@ league_info = leagues[league_name]
 
 # week selector
 week = st.sidebar.slider("Select Week", 1, league_info["scraper_progress"], league_info["scraper_progress"])
-st.set_page_config(page_title=f"MatchUp Analysis - Week {week}", page_icon="🏈")
 st.title(f"MatchUp Analysis - Week {week}")
 
 # load teams and schedule
