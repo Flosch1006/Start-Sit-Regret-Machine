@@ -1,0 +1,532 @@
+[
+    {
+        "status": "Active",
+        "team": "BUF",
+        "player": "J. Allen",
+        "positions": [
+            "QWRT",
+            "QB"
+        ],
+        "points": 49.85
+    },
+    {
+        "status": "Active",
+        "team": "DEN",
+        "player": "B. Nix",
+        "positions": [
+            "QWRT",
+            "QB"
+        ],
+        "points": 15.55
+    },
+    {
+        "status": "Active",
+        "team": "SEA",
+        "player": "K. Walker III",
+        "positions": [
+            "RB",
+            "QWRT",
+            "RWT"
+        ],
+        "points": 18.6
+    },
+    {
+        "status": "Active",
+        "team": "LAR",
+        "player": "K. Williams",
+        "positions": [
+            "RB",
+            "QWRT",
+            "RWT"
+        ],
+        "points": 16.1
+    },
+    {
+        "status": "Active",
+        "team": "ARI",
+        "player": "G. Dortch",
+        "positions": [
+            "RWT",
+            "QWRT",
+            "WR"
+        ],
+        "points": 18.6
+    },
+    {
+        "status": "Active",
+        "team": "GB",
+        "player": "M. Golden",
+        "positions": [
+            "RWT",
+            "QWRT",
+            "WR"
+        ],
+        "points": 3.4
+    },
+    {
+        "status": "Active",
+        "team": "MIN",
+        "player": "J. Nailor",
+        "positions": [
+            "RWT",
+            "QWRT",
+            "WR"
+        ],
+        "points": 2.6
+    },
+    {
+        "status": "Active",
+        "team": "DAL",
+        "player": "K. Turpin",
+        "positions": [
+            "RWT",
+            "QWRT",
+            "WR"
+        ],
+        "points": 1.0
+    },
+    {
+        "status": "Active",
+        "team": "NE",
+        "player": "H. Henry",
+        "positions": [
+            "RWT",
+            "TE",
+            "QWRT"
+        ],
+        "points": 10.5
+    },
+    {
+        "status": "Active",
+        "team": "CAR",
+        "player": "J. Sanders",
+        "positions": [
+            "RWT",
+            "TE",
+            "QWRT"
+        ],
+        "points": 8.2
+    },
+    {
+        "status": "Active",
+        "team": "HOU",
+        "player": "N. Chubb",
+        "positions": [
+            "RB",
+            "QWRT",
+            "RWT"
+        ],
+        "points": 1.7
+    },
+    {
+        "status": "Active",
+        "team": "MIN",
+        "player": "T. Hockenson",
+        "positions": [
+            "RWT",
+            "TE",
+            "QWRT"
+        ],
+        "points": 8.4
+    },
+    {
+        "status": "Bench",
+        "team": "DAL",
+        "player": "J. Milton",
+        "positions": [
+            "QWRT",
+            "QB"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Bench",
+        "team": "LV",
+        "player": "K. Pickett",
+        "positions": [
+            "QWRT",
+            "QB"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Bench",
+        "team": "NE",
+        "player": "R. Stevenson",
+        "positions": [
+            "RB",
+            "QWRT",
+            "RWT"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Bench",
+        "team": "TB",
+        "player": "C. Godwin",
+        "positions": [
+            "RWT",
+            "QWRT",
+            "WR"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Bench",
+        "team": "BAL",
+        "player": "D. Walker",
+        "positions": [
+            "RWT",
+            "QWRT",
+            "WR"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Bench",
+        "team": "JAX",
+        "player": "J. Mundt",
+        "positions": [
+            "RWT",
+            "TE",
+            "QWRT"
+        ],
+        "points": 5.5
+    },
+    {
+        "status": "Bench",
+        "team": "LAR",
+        "player": "B. Corum",
+        "positions": [
+            "RB",
+            "QWRT",
+            "RWT"
+        ],
+        "points": 1.0
+    },
+    {
+        "status": "Bench",
+        "team": "HOU",
+        "player": "D. Pierce",
+        "positions": [
+            "RB",
+            "QWRT",
+            "RWT"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Bench",
+        "team": "CLE",
+        "player": "D. Sampson",
+        "positions": [
+            "RB",
+            "QWRT",
+            "RWT"
+        ],
+        "points": 1.9
+    },
+    {
+        "status": "Active",
+        "team": "MIN",
+        "player": "J. Hargrave",
+        "positions": [
+            "DT",
+            "ID"
+        ],
+        "points": 4.75
+    },
+    {
+        "status": "Active",
+        "team": "NYG",
+        "player": "R. Nunez-Roches",
+        "positions": [
+            "DT",
+            "ID"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Active",
+        "team": "ATL",
+        "player": "D. Onyemata",
+        "positions": [
+            "DT",
+            "ID"
+        ],
+        "points": 9.5
+    },
+    {
+        "status": "Active",
+        "team": "WAS",
+        "player": "F. Luvu",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 6.25
+    },
+    {
+        "status": "Active",
+        "team": "CAR",
+        "player": "C. Rozeboom",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 16.5
+    },
+    {
+        "status": "Active",
+        "team": "NYJ",
+        "player": "Q. Williams",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 17.0
+    },
+    {
+        "status": "Active",
+        "team": "MIN",
+        "player": "J. Greenard",
+        "positions": [
+            "ER",
+            "ID"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Active",
+        "team": "JAX",
+        "player": "J. Hines-Allen",
+        "positions": [
+            "ER",
+            "ID"
+        ],
+        "points": 14.5
+    },
+    {
+        "status": "Active",
+        "team": "ARI",
+        "player": "J. Sweat",
+        "positions": [
+            "ER",
+            "LB",
+            "ID"
+        ],
+        "points": 7.0
+    },
+    {
+        "status": "Active",
+        "team": "PIT",
+        "player": "K. Dugger",
+        "positions": [
+            "DB",
+            "CB",
+            "ID",
+            "S"
+        ],
+        "points": 23.0
+    },
+    {
+        "status": "Active",
+        "team": "CAR",
+        "player": "M. Jackson",
+        "positions": [
+            "DB",
+            "CB",
+            "ID"
+        ],
+        "points": 6.25
+    },
+    {
+        "status": "Active",
+        "team": "MIA",
+        "player": "M. Fitzpatrick",
+        "positions": [
+            "DB",
+            "ID",
+            "S"
+        ],
+        "points": 21.75
+    },
+    {
+        "status": "Active",
+        "team": "LAR",
+        "player": "Q. Lake",
+        "positions": [
+            "DB",
+            "CB",
+            "ID",
+            "S"
+        ],
+        "points": 6.0
+    },
+    {
+        "status": "Active",
+        "team": "JAX",
+        "player": "A. Wingard",
+        "positions": [
+            "DB",
+            "ID",
+            "S"
+        ],
+        "points": 11.5
+    },
+    {
+        "status": "Bench",
+        "team": "CLE",
+        "player": "S. Harris",
+        "positions": [
+            "ER",
+            "DT",
+            "ID"
+        ],
+        "points": 4.75
+    },
+    {
+        "status": "Bench",
+        "team": "NYJ",
+        "player": "H. Phillips",
+        "positions": [
+            "DT",
+            "ID"
+        ],
+        "points": 13.75
+    },
+    {
+        "status": "Bench",
+        "team": "BAL",
+        "player": "J. Higgins",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Bench",
+        "team": "NYG",
+        "player": "D. Muasau",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Bench",
+        "team": "(N/A)",
+        "player": "J. Pearcy",
+        "positions": [
+            "ER",
+            "ID"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Bench",
+        "team": "PHI",
+        "player": "J. Phillips",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 12.75
+    },
+    {
+        "status": "Bench",
+        "team": "LAR",
+        "player": "J. Stewart",
+        "positions": [
+            "ER",
+            "ID"
+        ],
+        "points": 4.0
+    },
+    {
+        "status": "Bench",
+        "team": "DEN",
+        "player": "J. Strnad",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 15.5
+    },
+    {
+        "status": "Bench",
+        "team": "NO",
+        "player": "P. Werner",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Bench",
+        "team": "BUF",
+        "player": "J. Bosa",
+        "positions": [
+            "ER",
+            "ID"
+        ],
+        "points": 2.5
+    },
+    {
+        "status": "Bench",
+        "team": "IND",
+        "player": "L. Latu",
+        "positions": [
+            "ER",
+            "ID"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Bench",
+        "team": "DAL",
+        "player": "M. Liufau",
+        "positions": [
+            "LB",
+            "ID"
+        ],
+        "points": 10.25
+    },
+    {
+        "status": "Bench",
+        "team": "CAR",
+        "player": "D. Richardson",
+        "positions": [
+            "DB",
+            "CB",
+            "ID",
+            "S"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Bench",
+        "team": "TEN",
+        "player": "X. Woods",
+        "positions": [
+            "DB",
+            "ID",
+            "S"
+        ],
+        "points": 0.0
+    },
+    {
+        "status": "Bench",
+        "team": "NYG",
+        "player": "P. Adebo",
+        "positions": [
+            "DB",
+            "CB",
+            "ID"
+        ],
+        "points": 0.0
+    }
+]
