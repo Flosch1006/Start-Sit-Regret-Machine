@@ -340,7 +340,7 @@ weeks = {
 today = date.today()
 current_week = None
 for week, start in weeks.items():
-    if today > start:
+    if today >= start:
         current_week = int(week)
 
 # compare against scraping results
@@ -358,6 +358,6 @@ if current_week:
                 with open(os.path.join(DATA_DIR, "leagues.json"), "w") as f:
                     json.dump(update, f, indent=4)
         else:
-            print("Nothing to do")
+            print("League: ", league["short_name"])
             print("Current week:", current_week)
             print("Scraper progress for league:", league["scraper_progress"])
