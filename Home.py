@@ -150,7 +150,8 @@ st.dataframe(
         "Delta Points",
     ]],
     hide_index=True,
-    height=results.shape[0]*league_info["result_height"]
+    height=results.shape[0]*league_info["result_height"],
+    use_container_width=True
 )
 
 # display deltas
