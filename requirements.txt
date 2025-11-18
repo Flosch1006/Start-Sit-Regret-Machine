@@ -1,6 +1,6 @@
 altair
 tqdm
-streamlit
+streamlit==1.40.0
 pandas
 requests
 beautifulsoup4
