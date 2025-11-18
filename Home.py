@@ -155,7 +155,7 @@ st.dataframe(
 
 # display deltas
 st.subheader(f"Avg Team Delta vs Perfect Lineup after Week {week}")
-st.altair_chart(chart)
+st.altair_chart(chart, use_container_width=True)
 
 # team_choice = st.sidebar.selectbox("Select Team", )
 
