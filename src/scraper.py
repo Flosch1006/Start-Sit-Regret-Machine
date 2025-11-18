@@ -1,10 +1,13 @@
 import json
 import requests
 import re
+import os
 import pandas as pd
 from bs4 import BeautifulSoup
 from datetime import date
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "..", "data")
 
 # define functions to get teams
 def get_teams(league_id):
@@ -280,7 +283,7 @@ def get_schedule(league_id):
 
 
 # read league data
-with open("../data/leagues.json", "r") as f:
+with open(os.path.join(DATA_DIR, "leagues.json"), "r") as f:
     league_data = json.load(f)
 
 
@@ -291,14 +294,14 @@ def load_data(league: dict, period:int):
     schedule = get_schedule(league["id"])
 
     # save schedule
-    with open(f"../data/{league['short_name']}/schedule.json", "w") as f:
+    with open(os.path.join(DATA_DIR, league["short_name"], "schedule.json"), "w") as f:
         json.dump(schedule, f, indent=4)
 
     # get fantrax team data
     teams = get_teams(league["id"])
 
     # save team data
-    with open(f"../data/{league['short_name']}/teams.json", "w") as f:
+    with open(os.path.join(DATA_DIR, league["short_name"], "teams.json"), "w") as f:
         json.dump(teams, f, indent=4)
 
     # iterate over teams
@@ -308,7 +311,7 @@ def load_data(league: dict, period:int):
         roster = get_roster(league_id=league["id"], team_id=team["id"], period=period)
 
         # save period data
-        with open(f"../data/{league['short_name']}/rosters/{team['shortName']}_{period}.json", "w") as f:
+        with open(os.path.join(DATA_DIR, league["short_name"], "rosters", f"{team['shortName']}_{period}.json"), "w") as f:
             json.dump(roster.to_dict(orient="records"), f, indent=4)
 
 
@@ -349,8 +352,8 @@ if current_week:
                 # run scraper
                 load_data(league, period)
                 # update progress
-                with open("../data/leagues.json", "r") as f:
+                with open(os.path.join(DATA_DIR, "leagues.json"), "r") as f:
                     update = json.load(f)
                 update[name]["scraper_progress"] = current_week
-                with open("../data/leagues.json", "w") as f:
+                with open(os.path.join(DATA_DIR, "leagues.json"), "w") as f:
                     json.dump(update, f, indent=4)
