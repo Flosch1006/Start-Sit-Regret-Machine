@@ -1,9 +1,13 @@
 import json
+import os
 import pandas as pd
 from datetime import date
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "..", "data")
+
 # read league data
-with open("../data/leagues.json", "r") as f:
+with open(os.path.join(DATA_DIR, "leagues.json"), "r") as f:
     league_data = json.load(f)
 
 # define league weeks
@@ -38,10 +42,10 @@ for week, start in weeks.items():
 for league in league_data.values():
 
     # compile path
-    path = f"../data/{league['short_name']}"
+    path = os.path.join(DATA_DIR, league['short_name'])
 
     # read team data
-    with open(f"{path}/teams.json", "r") as f:
+    with open(os.path.join(path, "teams.json"), "r") as f:
         teams = json.load(f)
 
     # iterate over period
@@ -53,7 +57,7 @@ for league in league_data.values():
         for team in teams:
 
             # read period data
-            with open(f"../data/{league['short_name']}/rosters/{team['shortName']}_{period}.json", "r") as f:
+            with open(os.path.join(DATA_DIR, league['short_name'], "rosters", f"{team['shortName']}_{period}.json"), "r") as f:
                 roster_json = json.load(f)
 
             # convert roster to dataframe
@@ -95,9 +99,9 @@ for league in league_data.values():
             )
 
             # save period data
-            with open(f"{path}/periods/period_{period}.json", "w") as f:
+            with open(os.path.join(path, "periods", f"period_{period}.json"), "w") as f:
                 json.dump(period_summaries, f, indent=4)
 
             # update roster
-            with open(f"{path}/rosters/{team['shortName']}_{period}.json", "w") as f:
+            with open(os.path.join(path, "rosters", f"{team['shortName']}_{period}.json"), "w") as f:
                 json.dump(roster.to_dict(orient="records"), f, indent=4)
