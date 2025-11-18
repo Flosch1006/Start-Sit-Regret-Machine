@@ -36,6 +36,19 @@ jobs:
       - name: Run lineup solver
         run: python src/lineup_solver.py
 
+      - name: Debug — list data directory
+        run: |
+          echo "====== DATA DIR BEFORE COMMIT ======="
+          ls -R data || echo "data directory does not exist"
+
+      - name: Debug — git status
+        run: |
+          git status
+
+      - name: Debug — git diff
+        run: |
+          git diff
+
       # 6️⃣ Commit any updated data
       - name: Commit updated data
         run: |
