@@ -156,23 +156,3 @@ st.dataframe(
 # display deltas
 st.subheader(f"Avg Team Delta vs Perfect Lineup after Week {week}")
 st.altair_chart(chart, use_container_width=True)
-
-# team_choice = st.sidebar.selectbox("Select Team", )
-
-
-# deltas = load_team_deltas(league_info["short_name"], week)
-# st.subheader(f"Team delta vs perfect lineup — Week {week}")
-# st.dataframe(deltas)
-#
-# schedule = load_schedule(league_info["short_name"])
-# week_schedule = schedule[schedule["period"] == week]
-#
-# st.subheader(f"Schedule — Week {week}")
-# st.table(week_schedule[["home_team_name", "away_team_name"]])
-#
-# week_data = load_week_data(league_info["short_name"], week)
-#
-# team_roster = week_data
-#
-# st.subheader(f"Week {week} lineup")
-# st.dataframe(team_roster[["player", "positions", "points", "perfect"]])
