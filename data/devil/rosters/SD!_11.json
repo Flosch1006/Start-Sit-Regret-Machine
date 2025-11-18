@@ -7,7 +7,8 @@
             "QWRT",
             "QB"
         ],
-        "points": 15.65
+        "points": 15.65,
+        "perfect": "QB2"
     },
     {
         "status": "Active",
@@ -17,73 +18,80 @@
             "QWRT",
             "QB"
         ],
-        "points": 9.65
+        "points": 9.65,
+        "perfect": null
     },
     {
         "status": "Active",
         "team": "CAR",
         "player": "R. Dowdle",
         "positions": [
+            "RWT",
             "RB",
-            "QWRT",
-            "RWT"
+            "QWRT"
         ],
-        "points": 12.5
+        "points": 12.5,
+        "perfect": "RB1"
     },
     {
         "status": "Active",
         "team": "GB",
         "player": "J. Jacobs",
         "positions": [
+            "RWT",
             "RB",
-            "QWRT",
-            "RWT"
+            "QWRT"
         ],
-        "points": 4.0
+        "points": 4.0,
+        "perfect": "RB2"
     },
     {
         "status": "Active",
         "team": "PHI",
         "player": "A. Brown",
         "positions": [
+            "WR",
             "RWT",
-            "QWRT",
-            "WR"
+            "QWRT"
         ],
-        "points": 11.9
+        "points": 11.9,
+        "perfect": "WR2"
     },
     {
         "status": "Active",
         "team": "NE",
         "player": "S. Diggs",
         "positions": [
+            "WR",
             "RWT",
-            "QWRT",
-            "WR"
+            "QWRT"
         ],
-        "points": 19.5
+        "points": 19.5,
+        "perfect": "WR1"
     },
     {
         "status": "Active",
         "team": "LV",
         "player": "T. Lockett",
         "positions": [
+            "WR",
             "RWT",
-            "QWRT",
-            "WR"
+            "QWRT"
         ],
-        "points": 6.3
+        "points": 6.3,
+        "perfect": "WR3"
     },
     {
         "status": "Active",
         "team": "CHI",
         "player": "R. Odunze",
         "positions": [
+            "WR",
             "RWT",
-            "QWRT",
-            "WR"
+            "QWRT"
         ],
-        "points": 6.1
+        "points": 6.1,
+        "perfect": "WR4"
     },
     {
         "status": "Active",
@@ -94,7 +102,8 @@
             "TE",
             "QWRT"
         ],
-        "points": 8.1
+        "points": 8.1,
+        "perfect": "RWT1"
     },
     {
         "status": "Active",
@@ -105,7 +114,8 @@
             "TE",
             "QWRT"
         ],
-        "points": 32.5
+        "points": 32.5,
+        "perfect": "TE1"
     },
     {
         "status": "Active",
@@ -116,7 +126,8 @@
             "TE",
             "QWRT"
         ],
-        "points": 5.4
+        "points": 5.4,
+        "perfect": "RWT2"
     },
     {
         "status": "Active",
@@ -127,7 +138,8 @@
             "TE",
             "QWRT"
         ],
-        "points": 8.5
+        "points": 8.5,
+        "perfect": "TE2"
     },
     {
         "status": "Bench",
@@ -137,7 +149,8 @@
             "QWRT",
             "QB"
         ],
-        "points": 2.6
+        "points": 2.6,
+        "perfect": null
     },
     {
         "status": "Bench",
@@ -147,7 +160,8 @@
             "QWRT",
             "QB"
         ],
-        "points": 22.5
+        "points": 22.5,
+        "perfect": "QB1"
     },
     {
         "status": "Bench",
@@ -157,84 +171,92 @@
             "QWRT",
             "QB"
         ],
-        "points": 0.0
+        "points": 0.0,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "IND",
         "player": "D. Giddens",
         "positions": [
+            "RWT",
             "RB",
-            "QWRT",
-            "RWT"
+            "QWRT"
         ],
-        "points": 0.0
+        "points": 0.0,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "TEN",
         "player": "E. Ayomanor",
         "positions": [
+            "WR",
             "RWT",
-            "QWRT",
-            "WR"
+            "QWRT"
         ],
-        "points": 3.1
+        "points": 3.1,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "NYG",
         "player": "J. Hyatt",
         "positions": [
+            "WR",
             "RWT",
-            "QWRT",
-            "WR"
+            "QWRT"
         ],
-        "points": 3.8
+        "points": 3.8,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "CHI",
         "player": "D. Moore",
         "positions": [
+            "WR",
             "RWT",
-            "QWRT",
-            "WR"
+            "QWRT"
         ],
-        "points": 3.1
+        "points": 3.1,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "NE",
         "player": "K. Williams",
         "positions": [
+            "WR",
             "RWT",
-            "QWRT",
-            "WR"
+            "QWRT"
         ],
-        "points": 0.0
+        "points": 0.0,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "NYJ",
         "player": "G. Wilson",
         "positions": [
+            "WR",
             "RWT",
-            "QWRT",
-            "WR"
+            "QWRT"
         ],
-        "points": 0.0
+        "points": 0.0,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "PIT",
         "player": "R. Wilson",
         "positions": [
+            "WR",
             "RWT",
-            "QWRT",
-            "WR"
+            "QWRT"
         ],
-        "points": 2.7
+        "points": 2.7,
+        "perfect": null
     },
     {
         "status": "Bench",
@@ -245,358 +267,392 @@
             "TE",
             "QWRT"
         ],
-        "points": 0.0
+        "points": 0.0,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "PHI",
         "player": "T. Bigsby",
         "positions": [
+            "RWT",
             "RB",
-            "QWRT",
-            "RWT"
+            "QWRT"
         ],
-        "points": 3.4
+        "points": 3.4,
+        "perfect": null
     },
     {
         "status": "Active",
         "team": "PIT",
         "player": "C. Heyward",
         "positions": [
-            "DT",
-            "ID"
+            "ID",
+            "DT"
         ],
-        "points": 8.75
+        "points": 8.75,
+        "perfect": null
     },
     {
         "status": "Active",
         "team": "KC",
         "player": "C. Jones",
         "positions": [
-            "DT",
-            "ID"
+            "ID",
+            "DT"
         ],
-        "points": 9.75
+        "points": 9.75,
+        "perfect": "DT2"
     },
     {
         "status": "Active",
         "team": "SEA",
         "player": "L. Williams",
         "positions": [
-            "DT",
-            "ID"
+            "ID",
+            "DT"
         ],
-        "points": 9.5
+        "points": 9.5,
+        "perfect": "DT3"
     },
     {
         "status": "Active",
         "team": "MIA",
         "player": "J. Brooks",
         "positions": [
-            "LB",
-            "ID"
+            "ID",
+            "LB"
         ],
-        "points": 32.5
+        "points": 32.5,
+        "perfect": "LB1"
     },
     {
         "status": "Active",
         "team": "MIA",
         "player": "T. Dodson",
         "positions": [
-            "LB",
-            "ID"
+            "ID",
+            "LB"
         ],
-        "points": 21.0
+        "points": 21.0,
+        "perfect": "LB2"
     },
     {
         "status": "Active",
         "team": "LAC",
         "player": "D. Henley",
         "positions": [
-            "LB",
-            "ID"
+            "ID",
+            "LB"
         ],
-        "points": 9.25
+        "points": 9.25,
+        "perfect": null
     },
     {
         "status": "Active",
         "team": "NYG",
         "player": "B. Burns",
         "positions": [
-            "ER",
-            "ID"
+            "ID",
+            "ER"
         ],
-        "points": 21.5
+        "points": 21.5,
+        "perfect": "ER1"
     },
     {
         "status": "Active",
         "team": "NE",
         "player": "H. Landry",
         "positions": [
-            "ER",
-            "ID"
+            "ID",
+            "ER"
         ],
-        "points": 6.5
+        "points": 6.5,
+        "perfect": null
     },
     {
         "status": "Active",
         "team": "LAR",
         "player": "B. Young",
         "positions": [
-            "ER",
-            "ID"
+            "ID",
+            "ER"
         ],
-        "points": 12.0
+        "points": 12.0,
+        "perfect": "ER3"
     },
     {
         "status": "Active",
         "team": "CIN",
         "player": "J. Battle",
         "positions": [
+            "ID",
             "DB",
             "CB",
-            "ID",
             "S"
         ],
-        "points": 14.0
+        "points": 14.0,
+        "perfect": "CB2"
     },
     {
         "status": "Active",
         "team": "WAS",
         "player": "M. Sainristil",
         "positions": [
+            "ID",
             "DB",
             "CB",
-            "ID",
             "S"
         ],
-        "points": 5.75
+        "points": 5.75,
+        "perfect": null
     },
     {
         "status": "Active",
         "team": "KC",
         "player": "C. Conner",
         "positions": [
+            "ID",
             "DB",
             "CB",
-            "ID",
             "S"
         ],
-        "points": 19.25
+        "points": 19.25,
+        "perfect": "CB1"
     },
     {
         "status": "Active",
         "team": "GB",
         "player": "X. McKinney",
         "positions": [
+            "ID",
             "DB",
             "CB",
-            "ID",
             "S"
         ],
-        "points": 10.75
+        "points": 10.75,
+        "perfect": null
     },
     {
         "status": "Active",
         "team": "BAL",
         "player": "K. Hamilton",
         "positions": [
-            "DB",
             "ID",
+            "DB",
             "S"
         ],
-        "points": 36.25
+        "points": 36.25,
+        "perfect": "S1"
     },
     {
         "status": "Bench",
         "team": "CLE",
         "player": "M. Collins",
         "positions": [
-            "DT",
-            "ID"
+            "ID",
+            "DT"
         ],
-        "points": 8.5
+        "points": 8.5,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "WAS",
         "player": "J. Kinlaw",
         "positions": [
-            "DT",
-            "ID"
+            "ID",
+            "DT"
         ],
-        "points": 11.25
+        "points": 11.25,
+        "perfect": "DT1"
     },
     {
         "status": "Bench",
         "team": "DET",
         "player": "A. Anzalone",
         "positions": [
-            "LB",
-            "ID"
+            "ID",
+            "LB"
         ],
-        "points": 13.0
+        "points": 13.0,
+        "perfect": "LB3"
     },
     {
         "status": "Bench",
         "team": "SEA",
         "player": "E. Jones",
         "positions": [
-            "LB",
-            "ID"
+            "ID",
+            "LB"
         ],
-        "points": 11.25
+        "points": 11.25,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "BAL",
         "player": "K. Van Noy",
         "positions": [
-            "LB",
-            "ID"
+            "ID",
+            "LB"
         ],
-        "points": 7.0
+        "points": 7.0,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "ATL",
         "player": "J. Walker",
         "positions": [
-            "ER",
-            "ID"
+            "ID",
+            "ER"
         ],
-        "points": 10.0
+        "points": 10.0,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "CIN",
         "player": "T. Hendrickson",
         "positions": [
-            "ER",
-            "ID"
+            "ID",
+            "ER"
         ],
-        "points": 0.0
+        "points": 0.0,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "GB",
         "player": "M. Parsons",
         "positions": [
-            "ER",
-            "ID"
+            "ID",
+            "ER"
         ],
-        "points": 16.75
+        "points": 16.75,
+        "perfect": "ER2"
     },
     {
         "status": "Bench",
         "team": "JAX",
         "player": "T. Walker",
         "positions": [
-            "ER",
-            "ID"
+            "ID",
+            "ER"
         ],
-        "points": 9.25
+        "points": 9.25,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "DEN",
         "player": "J. Barron",
         "positions": [
+            "ID",
             "DB",
-            "CB",
-            "ID"
+            "CB"
         ],
-        "points": 6.5
+        "points": 6.5,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "GB",
         "player": "J. Bullard",
         "positions": [
+            "ID",
             "DB",
             "CB",
-            "ID",
             "S"
         ],
-        "points": 11.5
+        "points": 11.5,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "IND",
         "player": "N. Cross",
         "positions": [
+            "ID",
             "DB",
             "CB",
-            "ID",
             "S"
         ],
-        "points": 0.0
+        "points": 0.0,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "NYG",
         "player": "D. Belton",
         "positions": [
+            "ID",
             "DB",
             "CB",
-            "ID",
             "S"
         ],
-        "points": 12.5
+        "points": 12.5,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "CHI",
         "player": "J. Brisker",
         "positions": [
-            "DB",
             "ID",
+            "DB",
             "S"
         ],
-        "points": 5.25
+        "points": 5.25,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "HOU",
         "player": "C. Bullock",
         "positions": [
-            "DB",
             "ID",
+            "DB",
             "S"
         ],
-        "points": 9.75
+        "points": 9.75,
+        "perfect": null
     },
     {
         "status": "Bench",
         "team": "CLE",
         "player": "R. Hickman",
         "positions": [
-            "DB",
             "ID",
+            "DB",
             "S"
         ],
-        "points": 13.5
+        "points": 13.5,
+        "perfect": "S2"
     },
     {
         "status": "Bench",
         "team": "CIN",
         "player": "G. Stone",
         "positions": [
-            "DB",
             "ID",
+            "DB",
             "S"
         ],
-        "points": 13.0
+        "points": 13.0,
+        "perfect": "DB1"
     },
     {
         "status": "Bench",
         "team": "TEN",
         "player": "K. Winston",
         "positions": [
-            "DB",
             "ID",
+            "DB",
             "S"
         ],
-        "points": 9.0
+        "points": 9.0,
+        "perfect": null
     }
 ]
