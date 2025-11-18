@@ -10,12 +10,16 @@ st.title("Start/Sit Regret Machine")
 # load leagues
 leagues = load_leagues()
 
-# add league selector
-league_name = st.sidebar.selectbox("Select League", list(leagues.keys()))
+# league selector
+default_league = st.session_state.get("selected_league", list(leagues.keys())[0])
+league_name = st.sidebar.selectbox("Select League", list(leagues.keys()), index=list(leagues.keys()).index(default_league))
+st.session_state["selected_league"] = league_name
 league_info = leagues[league_name]
 
-# add week selector
-week = st.sidebar.slider("Select Week", 1, league_info["scraper_progress"], league_info["scraper_progress"])
+# week selector
+default_week = st.session_state.get("selected_week", league_info["scraper_progress"])
+week = st.sidebar.slider("Select Week", 1, league_info["scraper_progress"], default_week)
+st.session_state["selected_week"] = week
 
 # Load teams and schedule
 teams = load_teams(league_info["short_name"])
