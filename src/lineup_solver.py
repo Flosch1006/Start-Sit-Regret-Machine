@@ -35,7 +35,7 @@ weeks = {
 today = date.today()
 current_week = None
 for week, start in weeks.items():
-    if today > start:
+    if today >= start:
         current_week = int(week)
 
 # iterate over leagues
