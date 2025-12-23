@@ -1,10 +1,10 @@
 name: Run Scraper and Solver
 
-on:
-  schedule:
-    # Every Tuesday at 06:00 UTC (≈ 07:00 Germany winter time)
-    - cron: "0 6 * * 2"
-  workflow_dispatch:
+on: {}
+#  schedule:
+#    # Every Tuesday at 06:00 UTC (≈ 07:00 Germany winter time)
+#    - cron: "0 6 * * 2"
+#  workflow_dispatch:
 
 permissions:
   contents: write
