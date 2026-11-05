@@ -7,6 +7,8 @@ export interface Swap {
   start: RosterPlayer;
   /** points the swap would have added */
   gain: number;
+  /** lineup position the new player takes in the perfect lineup, e.g. "SFX" or "ER" */
+  slot: string;
 }
 
 export interface Swaps {
@@ -64,7 +66,7 @@ export function buildSwaps(roster: RosterPlayer[]): Swaps {
     if (at === -1) at = 0;
     const [sit] = outs.splice(at, 1);
     if (!sit) break;
-    swaps.push({ sit, start, gain: start.points - sit.points });
+    swaps.push({ sit, start, gain: start.points - sit.points, slot: pos });
   }
   swaps.sort((a, b) => b.gain - a.gain);
   return { swaps, extras };

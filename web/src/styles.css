@@ -676,6 +676,17 @@ td.loss {
   gap: 2px 8px;
 }
 
+.slot-tag {
+  min-width: 3.2ch;
+  padding: 0 6px;
+  color: var(--bg);
+  background: var(--regret);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-align: center;
+}
+
 .player-pts {
   color: var(--ink-dim);
   font-size: 0.875rem;

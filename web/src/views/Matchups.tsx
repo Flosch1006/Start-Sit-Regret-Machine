@@ -74,7 +74,7 @@ function TeamLineup({ side, roster, league, week, team }: LineupProps) {
 
       {miss && miss.gain > 0 ? (
         <p className="callout">
-          <span className="callout-label">Biggest miss</span>
+          <span className="callout-label">Biggest miss · {miss.slot}</span>
           Started {miss.sit.player} ({pts(miss.sit)}) instead of {miss.start.player} ({pts(miss.start)}):{" "}
           <strong>+{fmt(miss.gain)}</strong>
         </p>
@@ -100,7 +100,7 @@ function TeamLineup({ side, roster, league, week, team }: LineupProps) {
                     <Player p={s.sit} />
                   </td>
                   <td className="start">
-                    <Player p={s.start} />
+                    <Player p={s.start} slot={s.slot} />
                   </td>
                   <td className="num gain">{s.gain > 0 ? `+${fmt(s.gain)}` : fmt(s.gain)}</td>
                 </tr>
@@ -146,9 +146,14 @@ function TeamLineup({ side, roster, league, week, team }: LineupProps) {
   );
 }
 
-function Player({ p }: { p: RosterPlayer }) {
+function Player({ p, slot }: { p: RosterPlayer; slot?: string }) {
   return (
     <span className="player">
+      {slot && (
+        <span className="slot-tag" title={`Would play ${slot} in the perfect lineup`}>
+          {slot}
+        </span>
+      )}
       <span className="player-name">{p.player}</span>
       <span className="player-pts">{pts(p)}</span>
     </span>

@@ -30,6 +30,7 @@ describe("buildSwaps", () => {
     expect(swaps[0].sit.player).toBe("Starter RB A");
     expect(swaps[0].start.player).toBe("Bench RB");
     expect(swaps[0].gain).toBe(18);
+    expect(swaps[0].slot).toBe("RB");
     expect(extras).toHaveLength(0);
   });
 
