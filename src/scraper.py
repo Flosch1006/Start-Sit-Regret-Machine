@@ -98,7 +98,13 @@ def fantrax_cookies():
 
 
 # define function to get roster data
-def get_roster(league_id, team_id, period):
+def get_roster(league_id, team_id, period, slots=None):
+    """Roster of one team and week.
+
+    slots: the lineup positions of the league in lineup order (keys of the
+    "roster" entry in leagues.json). With them every started player gets the
+    position of the slot he really played in (column "slot").
+    """
     cookies = fantrax_cookies()
 
     headers = {
@@ -168,7 +174,9 @@ def get_roster(league_id, team_id, period):
                 info = pd.Series(player["scorer"])
                 info.posShortNames = re.sub(r"<.*?>", "", info.posShortNames).split(",")
                 status = pd.Series(status_ids[player["statusId"]], index=["status"])
-                temp = pd.concat([status, info, player_scorings])
+                # for started players posId is the slot they played in
+                slot_id = pd.Series(player["posId"], index=["slotPosId"])
+                temp = pd.concat([status, slot_id, info, player_scorings])
 
                 if player["statusId"] in ["1", "2"]:
                     scorings.append(temp)
@@ -178,7 +186,7 @@ def get_roster(league_id, team_id, period):
 
     # keep relevant columns
     scorings = scorings[[
-        "status", "teamShortName", "shortName", "posShortNames", "Fantasy Points"
+        "status", "slotPosId", "teamShortName", "shortName", "posShortNames", "Fantasy Points"
     ]]
 
     # edit colnames
@@ -191,6 +199,24 @@ def get_roster(league_id, team_id, period):
 
     # convert points to float
     scorings["points"] = pd.to_numeric(scorings["points"])
+
+    # Fantrax gives slots as ids without names. Started players are listed in
+    # lineup order, so the n-th distinct id belongs to the n-th lineup position.
+    scorings["slot"] = None
+    if slots:
+        started = scorings[scorings["status"] == "Active"]
+        ids = list(dict.fromkeys(started["slotPosId"]))
+        if len(ids) != len(slots):
+            raise RuntimeError(
+                f"Found {len(ids)} slot ids for {len(slots)} lineup positions "
+                f"(team {team_id}, week {period}). The lineup order does not match leagues.json."
+            )
+        names = dict(zip(ids, slots))
+        scorings["slot"] = [
+            names[row.slotPosId] if row.status == "Active" else None
+            for row in scorings.itertuples()
+        ]
+    scorings = scorings.drop(columns=["slotPosId"])
 
     # assign flex positions
     for index, player in scorings.iterrows():
@@ -343,7 +369,12 @@ def load_data(league: dict, period:int):
     for team in teams:
 
         # get fantrax period data
-        roster = get_roster(league_id=league["id"], team_id=team["id"], period=period)
+        roster = get_roster(
+            league_id=league["id"],
+            team_id=team["id"],
+            period=period,
+            slots=list(league["roster"].keys()),
+        )
 
         # save period data
         with open(os.path.join(DATA_DIR, league["short_name"], "rosters", f"{team['shortName']}_{period}.json"), "w") as f:

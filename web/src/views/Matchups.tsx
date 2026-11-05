@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { TeamLogo } from "../components/TeamLogo";
+import { NameGroup, TeamName, nickname } from "../components/TeamName";
 import { fmt, loadWeek } from "../lib/data";
 import { buildSwaps, lineupTotals, perfectLineup } from "../lib/lineups";
 import { actualWinner, flips, perfectWinner } from "../lib/results";
@@ -15,7 +16,6 @@ interface Props {
   onMatch: (index: number) => void;
 }
 
-const nickname = (name: string) => name.split(" ").at(-1) ?? name;
 const pts = (p: RosterPlayer) => fmt(p.points);
 
 function verdict(g: Game): string {
@@ -38,7 +38,8 @@ interface LineupProps {
 function TeamLineup({ side, roster, league, week, team }: LineupProps) {
   const title = (
     <h3 className="team-title">
-      <TeamLogo team={team} size={72} /> {nickname(side.name)}
+      <TeamLogo team={team} size={72} />
+      <TeamName name={side.name} shortName={side.shortName} />
     </h3>
   );
   if (!roster) {
@@ -55,7 +56,7 @@ function TeamLineup({ side, roster, league, week, team }: LineupProps) {
   const totals = lineupTotals(roster);
   const left = Math.max(0, totals.perfect - totals.actual);
   const scale = Math.max(totals.perfect, totals.actual, 1);
-  const miss = swaps[0];
+  const best = swaps[0];
 
   return (
     <section className="lineup" aria-label={side.name}>
@@ -72,11 +73,11 @@ function TeamLineup({ side, roster, league, week, team }: LineupProps) {
         <strong>{fmt(totals.actual)}</strong> scored · <strong>{fmt(left)}</strong> left on the bench
       </p>
 
-      {miss && miss.gain > 0 ? (
+      {best && best.gain > 0 ? (
         <p className="callout">
-          <span className="callout-label">Biggest miss</span>
-          Started {miss.sit.player} ({pts(miss.sit)}) instead of {miss.start.player} ({pts(miss.start)}):{" "}
-          <strong>+{fmt(miss.gain)}</strong>
+          <span className="callout-label">Biggest miss · {best.slot}</span>
+          Start {best.start.player} ({pts(best.start)}) for {best.sit.player} ({pts(best.sit)}):{" "}
+          <strong>+{fmt(best.gain)}</strong>
         </p>
       ) : (
         <p className="callout callout-ok">A perfect lineup. Nothing to regret.</p>
@@ -84,33 +85,34 @@ function TeamLineup({ side, roster, league, week, team }: LineupProps) {
 
       {swaps.length > 0 && (
         <div className="table-wrap">
-          <table className="roster">
+          <table className="roster swaps">
             <caption className="sr-only">Swaps that would have made {nickname(side.name)}'s lineup perfect</caption>
             <thead>
               <tr>
-                <th scope="col">Should have sat</th>
-                <th scope="col">Should have started</th>
+                <th scope="col">At</th>
+                <th scope="col">Start</th>
+                <th scope="col">For</th>
                 <th scope="col" className="num">Gain</th>
               </tr>
             </thead>
             <tbody>
-              {swaps.map((s) => (
-                <tr key={`${s.sit.player}-${s.start.player}`}>
-                  <td className="sit">
-                    <Player p={s.sit} />
+              {swaps.map((s, i) => (
+                <tr key={`${s.start.player}-${i}`}>
+                  <td className="slot-cell">
+                    <span className="slot-tag">{s.slot}</span>
                   </td>
                   <td className="start">
                     <Player p={s.start} />
                   </td>
-                  <td className="num gain">{s.gain > 0 ? `+${fmt(s.gain)}` : fmt(s.gain)}</td>
+                  <td className="sit">
+                    <Player p={s.sit} />
+                  </td>
+                  <td className="num gain">{s.gain >= 0 ? `+${fmt(s.gain)}` : fmt(s.gain)}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-      )}
-      {swaps.some((s) => s.gain < 0) && (
-        <p className="note">A negative gain comes from flex slots: the perfect lineup shuffles players, so only the total is exact.</p>
       )}
       {extras.length > 0 && (
         <p className="note">
@@ -168,7 +170,7 @@ export function Matchups({ data, season, league, week, match, onMatch }: Props) 
   const game = games[index];
 
   return (
-    <>
+    <NameGroup>
       <nav className="match-list" aria-label={`Week ${week} matchups`}>
         {games.map((g, i) => (
           <button
@@ -193,7 +195,8 @@ export function Matchups({ data, season, league, week, match, onMatch }: Props) 
       <section aria-label="Result" className="duel">
         <div className="duel-side">
           <span className="duel-team">
-            <TeamLogo team={team(game.home.shortName)} size={64} /> {nickname(game.home.name)}
+            <TeamLogo team={team(game.home.shortName)} size={64} />
+            <TeamName name={game.home.name} shortName={game.home.shortName} />
           </span>
           <span className="duel-score">{game.home.actual === null ? "–" : fmt(game.home.actual)}</span>
           <span className="duel-perfect">perfect {game.home.perfect === null ? "–" : fmt(game.home.perfect)}</span>
@@ -201,7 +204,8 @@ export function Matchups({ data, season, league, week, match, onMatch }: Props) 
         <span className="duel-vs" aria-hidden="true">vs</span>
         <div className="duel-side">
           <span className="duel-team">
-            <TeamLogo team={team(game.away.shortName)} size={64} /> {nickname(game.away.name)}
+            <TeamLogo team={team(game.away.shortName)} size={64} />
+            <TeamName name={game.away.name} shortName={game.away.shortName} />
           </span>
           <span className="duel-score">{game.away.actual === null ? "–" : fmt(game.away.actual)}</span>
           <span className="duel-perfect">perfect {game.away.perfect === null ? "–" : fmt(game.away.perfect)}</span>
@@ -217,6 +221,6 @@ export function Matchups({ data, season, league, week, match, onMatch }: Props) 
           <TeamLineup side={game.away} roster={rosters.data[game.away.shortName]} league={league} week={week} team={team(game.away.shortName)} />
         </div>
       )}
-    </>
+    </NameGroup>
   );
 }

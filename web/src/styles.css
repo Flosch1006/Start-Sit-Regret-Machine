@@ -350,6 +350,48 @@ td.loss {
   }
 }
 
+/* team names never wrap: full name while it fits, short name otherwise (see TeamName) */
+.team-name {
+  position: relative;
+  display: block;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.team-name-full {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.team-cell {
+  min-width: 0;
+}
+
+.team-title,
+.duel-team {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.duel-team {
+  align-self: stretch;
+}
+
+.duel-side {
+  min-width: 0;
+}
+
+.duel-side:last-child .duel-team {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
 /* team logos sit inline next to the name */
 .logo {
   display: inline-block;
@@ -392,6 +434,124 @@ td.loss {
 }
 
 /* schedule: scoreboard cards */
+/* season totals with perfect lineups */
+.best-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 12px;
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.best {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--regret);
+  border-radius: var(--radius);
+}
+
+.best-title {
+  color: var(--regret);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.best-team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.best-points {
+  font-size: 2rem;
+  font-stretch: 68%;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.totals-table th,
+.totals-table td {
+  padding-block: 6px;
+}
+
+.totals-table .team {
+  white-space: nowrap;
+}
+
+/* room for the longest names; when the window is narrower the table scrolls sideways */
+@media (min-width: 641px) {
+  .standings th.team,
+  .totals-table th.team {
+    width: 270px;
+    min-width: 270px;
+  }
+
+  .totals-table th.team {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--bg);
+  }
+}
+
+.totals-table .rank {
+  color: var(--ink-dim);
+}
+
+.totals-table td.is-best {
+  color: var(--bg);
+  background: var(--regret);
+  font-weight: 800;
+}
+
+.sort {
+  padding: 4px 0;
+  color: inherit;
+  background: none;
+  border: 0;
+  font: inherit;
+  font-weight: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.sort:hover {
+  color: var(--ink);
+}
+
+th[aria-sort="descending"] .sort,
+th[aria-sort="ascending"] .sort {
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  /* phone: the team stays visible while the numbers scroll sideways */
+  .totals-table .team {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--bg);
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+  }
+
+  .totals-table .logo {
+    width: 32px;
+    height: 32px;
+  }
+}
+
 .week-head {
   display: flex;
   flex-wrap: wrap;
@@ -644,13 +804,18 @@ td.loss {
   border-left-color: var(--scored);
 }
 
-.roster td.sit {
-  box-shadow: inset 4px 0 0 var(--loss);
+/* swaps: start X for Y at a position */
+.swaps td.slot-cell {
+  width: 1%;
+  white-space: nowrap;
 }
 
-.roster td.start {
+.swaps td.start {
   background: color-mix(in srgb, var(--regret) 14%, var(--bg));
-  box-shadow: inset 4px 0 0 var(--regret);
+}
+
+.swaps td.sit {
+  color: var(--ink-dim);
 }
 
 .perfect-lineup {
@@ -674,6 +839,22 @@ td.loss {
   flex-wrap: wrap;
   align-items: baseline;
   gap: 2px 8px;
+}
+
+.slot-tag {
+  min-width: 3.2ch;
+  padding: 0 6px;
+  color: var(--bg);
+  background: var(--regret);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.slot-sat {
+  color: var(--ink);
+  background: var(--loss);
 }
 
 .player-pts {

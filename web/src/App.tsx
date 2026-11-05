@@ -5,10 +5,12 @@ import type { Index } from "./lib/types";
 import { useAsync } from "./lib/useAsync";
 import { Matchups } from "./views/Matchups";
 import { Schedule } from "./views/Schedule";
+import { Season } from "./views/Season";
 import { Standings } from "./views/Standings";
 
 const VIEW_LABEL: Record<View, string> = {
   standings: "Standings",
+  season: "Season",
   schedule: "Schedule",
   matchups: "Matchups",
 };
@@ -64,7 +66,10 @@ function Shell({ index }: { index: Index }) {
         )}
         {data.loading && <p className="empty">Loading league data…</p>}
         {data.data && route.view === "standings" && <Standings data={data.data} week={week} />}
-        {data.data && route.view === "schedule" && <Schedule data={data.data} season={season} league={league.shortName} week={week} />}
+        {data.data && route.view === "season" && (
+          <Season data={data.data} season={season} league={league.shortName} week={week} />
+        )}
+        {data.data && route.view === "schedule" &&<Schedule data={data.data} season={season} league={league.shortName} week={week} />}
         {data.data && route.view === "matchups" && (
           <Matchups
             data={data.data}
