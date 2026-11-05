@@ -47,6 +47,25 @@ describe("buildSwaps", () => {
     ]);
   });
 
+  it("never swaps across offense, defense and kicker", () => {
+    // the perfect RB comes from the bench, but no started player is an RB: the QB
+    // (the flex slots shifted) must be paired, not the kicker with the lowest score
+    const shifted = [
+      p("Weak QB", "Active", 6.6, null, ["SFX", "QB", "QWRT"]),
+      p("Weak K", "Active", 1, null, ["K"]),
+      p("Weak LB", "Active", 1, null, ["ID", "LB"]),
+      p("Bench RB", "Bench", 15, "RB1", ["RB", "RWT", "SFX", "QWRT"]),
+      p("Bench K", "Bench", 6, "K1", ["K"]),
+      p("Bench LB", "Bench", 12, "LB1", ["ID", "LB"]),
+    ];
+    const { swaps } = buildSwaps(shifted);
+    expect(swaps.map((s) => [s.sit.player, s.start.player])).toEqual([
+      ["Weak LB", "Bench LB"],
+      ["Weak QB", "Bench RB"],
+      ["Weak K", "Bench K"],
+    ]);
+  });
+
   it("gains add up to the points left on the bench", () => {
     const { swaps } = buildSwaps(roster);
     const totals = lineupTotals(roster);

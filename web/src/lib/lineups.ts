@@ -22,6 +22,19 @@ export interface Swaps {
 const sameBody = (a: RosterPlayer, b: RosterPlayer) => a.player === b.player && a.team === b.team;
 const basePos = (slot: string) => slot.replace(/\d+$/, "");
 
+/** Offense, defense and kicker never trade places, whatever the flex slots do. */
+type Family = "offense" | "defense" | "kicker";
+const OFFENSE = ["QB", "RB", "WR", "TE", "RWT", "SFX", "QWRT"];
+const familyOfSlot = (pos: string): Family => (pos === "K" ? "kicker" : OFFENSE.includes(pos) ? "offense" : "defense");
+/** A two-way player (WR and CB) belongs to two families. */
+function familiesOfPlayer(p: RosterPlayer): Family[] {
+  if (p.positions.includes("K")) return ["kicker"];
+  const families: Family[] = [];
+  if (p.positions.some((pos) => OFFENSE.includes(pos))) families.push("offense");
+  if (p.positions.some((pos) => !OFFENSE.includes(pos))) families.push("defense");
+  return families;
+}
+
 /**
  * The actual slot of a started player is not in the data, so lineups are not
  * compared slot by slot. Instead every player who should have sat is paired
@@ -43,7 +56,11 @@ export function buildSwaps(roster: RosterPlayer[]): Swaps {
   const swaps: Swap[] = [];
   for (const start of ins) {
     const pos = basePos(start.perfect ?? "");
+    const family = familyOfSlot(pos);
+    // same position first, then the same family; only without any candidate in the family take the lowest scorer
     let at = outs.findIndex((o) => o.positions.includes(pos));
+    if (at === -1) at = outs.findIndex((o) => familiesOfPlayer(o).length === 1 && familiesOfPlayer(o)[0] === family);
+    if (at === -1) at = outs.findIndex((o) => familiesOfPlayer(o).includes(family));
     if (at === -1) at = 0;
     const [sit] = outs.splice(at, 1);
     if (!sit) break;
