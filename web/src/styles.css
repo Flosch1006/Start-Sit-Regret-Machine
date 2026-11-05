@@ -644,13 +644,55 @@ td.loss {
   border-left-color: var(--scored);
 }
 
-.roster td.sit {
+/* who should have started / sat: two plain lists with a total each */
+.change {
+  margin-bottom: 12px;
+}
+
+.change-title {
+  padding: 8px 0 4px;
+  color: var(--ink);
+  font-size: 1.125rem;
+  font-stretch: 68%;
+  font-weight: 800;
+  text-align: left;
+}
+
+.change-start tbody td:first-child {
+  box-shadow: inset 4px 0 0 var(--regret);
+}
+
+.change-sit tbody td:first-child {
   box-shadow: inset 4px 0 0 var(--loss);
 }
 
-.roster td.start {
-  background: color-mix(in srgb, var(--regret) 14%, var(--bg));
-  box-shadow: inset 4px 0 0 var(--regret);
+.change-sit .slot-tag {
+  color: var(--ink);
+  background: var(--loss);
+}
+
+.change .slot-cell {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.change tfoot th,
+.change tfoot td {
+  border-bottom: 0;
+  font-weight: 700;
+}
+
+.change-start tfoot td {
+  color: var(--regret);
+}
+
+.net {
+  margin: 4px 0 0;
+  font-size: 1.125rem;
+}
+
+.net strong {
+  color: var(--regret);
 }
 
 .perfect-lineup {
