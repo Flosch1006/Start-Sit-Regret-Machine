@@ -48,6 +48,18 @@ describe("buildSwaps", () => {
     ]);
   });
 
+  it("pairs the player who really played a slot with the perfect player of that slot", () => {
+    const slotted = [
+      { ...p("Flex WR", "Active", 1, null, ["WR", "RWT"]), slot: "RWT" },
+      { ...p("Weak RB", "Active", 2, null, ["RB", "RWT"]), slot: "RB" },
+      p("Bench RB", "Bench", 15, "RB1", ["RB", "RWT"]),
+    ];
+    // Flex WR scores less, but Weak RB is the one who held the RB slot
+    const { swaps } = buildSwaps(slotted);
+    expect(swaps).toHaveLength(1);
+    expect(swaps[0].sit.player).toBe("Weak RB");
+  });
+
   it("never swaps across offense, defense and kicker", () => {
     // the perfect RB comes from the bench, but no started player is an RB: the QB
     // (the flex slots shifted) must be paired, not the kicker with the lowest score

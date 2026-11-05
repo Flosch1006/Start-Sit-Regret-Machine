@@ -97,7 +97,7 @@ function TeamLineup({ side, roster, league, week, team }: LineupProps) {
               {swaps.map((s) => (
                 <tr key={`${s.sit.player}-${s.start.player}`}>
                   <td className="sit">
-                    <Player p={s.sit} />
+                    <Player p={s.sit} slot={s.sit.slot ?? undefined} sat />
                   </td>
                   <td className="start">
                     <Player p={s.start} slot={s.slot} />
@@ -146,11 +146,14 @@ function TeamLineup({ side, roster, league, week, team }: LineupProps) {
   );
 }
 
-function Player({ p, slot }: { p: RosterPlayer; slot?: string }) {
+function Player({ p, slot, sat = false }: { p: RosterPlayer; slot?: string; sat?: boolean }) {
   return (
     <span className="player">
       {slot && (
-        <span className="slot-tag" title={`Would play ${slot} in the perfect lineup`}>
+        <span
+          className={sat ? "slot-tag slot-sat" : "slot-tag"}
+          title={sat ? `Played ${slot}` : `Would play ${slot} in the perfect lineup`}
+        >
           {slot}
         </span>
       )}

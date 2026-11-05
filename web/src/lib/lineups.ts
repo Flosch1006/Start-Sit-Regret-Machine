@@ -59,8 +59,10 @@ export function buildSwaps(roster: RosterPlayer[]): Swaps {
   for (const start of ins) {
     const pos = basePos(start.perfect ?? "");
     const family = familyOfSlot(pos);
-    // same position first, then the same family; only without any candidate in the family take the lowest scorer
-    let at = outs.findIndex((o) => o.positions.includes(pos));
+    // the player who really sat in that slot first, then anyone eligible for it, then the same family;
+    // only without any candidate in the family take the lowest scorer
+    let at = outs.findIndex((o) => o.slot === pos);
+    if (at === -1) at = outs.findIndex((o) => o.positions.includes(pos));
     if (at === -1) at = outs.findIndex((o) => familiesOfPlayer(o).length === 1 && familiesOfPlayer(o)[0] === family);
     if (at === -1) at = outs.findIndex((o) => familiesOfPlayer(o).includes(family));
     if (at === -1) at = 0;

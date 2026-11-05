@@ -56,6 +56,8 @@ export interface RosterPlayer {
   positions: string[];
   points: number;
   perfect: string | null;
+  /** lineup position a started player really played in, e.g. "SFX"; absent in old seasons */
+  slot?: string | null;
 }
 
 /** All rosters of one week, keyed by team short name. */
