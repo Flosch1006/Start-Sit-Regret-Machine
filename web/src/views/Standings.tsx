@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { TeamLogo } from "../components/TeamLogo";
-import { TeamName } from "../components/TeamName";
+import { NameGroup, TeamName } from "../components/TeamName";
 import { fmt } from "../lib/data";
 import { computeStandings } from "../lib/standings";
 import type { LeagueData } from "../lib/types";
@@ -24,7 +24,7 @@ export function Standings({ data, week }: Props) {
   const leagueTotal = rows.reduce((sum, r) => sum + (r.perfectPoints - r.actualPoints), 0);
 
   return (
-    <>
+    <NameGroup>
       <section aria-labelledby="headline">
         <h2 id="headline" className="headline">
           <TeamLogo team={teams.get(worst.team)} size={72} /> {worst.team} left {fmt(worst.deltaPerWeek)} points on the bench every week.
@@ -93,6 +93,6 @@ export function Standings({ data, week }: Props) {
           </tbody>
         </table>
       </div>
-    </>
+    </NameGroup>
   );
 }

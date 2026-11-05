@@ -488,6 +488,22 @@ td.loss {
   white-space: nowrap;
 }
 
+/* room for the longest names; when the window is narrower the table scrolls sideways */
+@media (min-width: 641px) {
+  .standings th.team,
+  .totals-table th.team {
+    width: 270px;
+    min-width: 270px;
+  }
+
+  .totals-table th.team {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--bg);
+  }
+}
+
 .totals-table .rank {
   color: var(--ink-dim);
 }

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { TeamLogo } from "../components/TeamLogo";
-import { TeamName } from "../components/TeamName";
+import { NameGroup, TeamName, nickname } from "../components/TeamName";
 import { fmt, loadWeek } from "../lib/data";
 import { buildSwaps, lineupTotals, perfectLineup } from "../lib/lineups";
 import { actualWinner, flips, perfectWinner } from "../lib/results";
@@ -16,7 +16,6 @@ interface Props {
   onMatch: (index: number) => void;
 }
 
-const nickname = (name: string) => name.split(" ").at(-1) ?? name;
 const pts = (p: RosterPlayer) => fmt(p.points);
 
 function verdict(g: Game): string {
@@ -40,7 +39,7 @@ function TeamLineup({ side, roster, league, week, team }: LineupProps) {
   const title = (
     <h3 className="team-title">
       <TeamLogo team={team} size={72} />
-      <TeamName name={nickname(side.name)} shortName={side.shortName} />
+      <TeamName name={side.name} shortName={side.shortName} />
     </h3>
   );
   if (!roster) {
@@ -171,7 +170,7 @@ export function Matchups({ data, season, league, week, match, onMatch }: Props) 
   const game = games[index];
 
   return (
-    <>
+    <NameGroup>
       <nav className="match-list" aria-label={`Week ${week} matchups`}>
         {games.map((g, i) => (
           <button
@@ -197,7 +196,7 @@ export function Matchups({ data, season, league, week, match, onMatch }: Props) 
         <div className="duel-side">
           <span className="duel-team">
             <TeamLogo team={team(game.home.shortName)} size={64} />
-            <TeamName name={nickname(game.home.name)} shortName={game.home.shortName} />
+            <TeamName name={game.home.name} shortName={game.home.shortName} />
           </span>
           <span className="duel-score">{game.home.actual === null ? "–" : fmt(game.home.actual)}</span>
           <span className="duel-perfect">perfect {game.home.perfect === null ? "–" : fmt(game.home.perfect)}</span>
@@ -206,7 +205,7 @@ export function Matchups({ data, season, league, week, match, onMatch }: Props) 
         <div className="duel-side">
           <span className="duel-team">
             <TeamLogo team={team(game.away.shortName)} size={64} />
-            <TeamName name={nickname(game.away.name)} shortName={game.away.shortName} />
+            <TeamName name={game.away.name} shortName={game.away.shortName} />
           </span>
           <span className="duel-score">{game.away.actual === null ? "–" : fmt(game.away.actual)}</span>
           <span className="duel-perfect">perfect {game.away.perfect === null ? "–" : fmt(game.away.perfect)}</span>
@@ -222,6 +221,6 @@ export function Matchups({ data, season, league, week, match, onMatch }: Props) 
           <TeamLineup side={game.away} roster={rosters.data[game.away.shortName]} league={league} week={week} team={team(game.away.shortName)} />
         </div>
       )}
-    </>
+    </NameGroup>
   );
 }

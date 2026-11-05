@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { TeamLogo } from "../components/TeamLogo";
-import { TeamName } from "../components/TeamName";
+import { NameGroup, TeamName } from "../components/TeamName";
 import { fmt, loadWeek } from "../lib/data";
 import { computeTotals, type TotalsRow } from "../lib/totals";
 import type { LeagueData, Team } from "../lib/types";
@@ -86,7 +86,7 @@ export function Season({ data, season, league, week }: Props) {
   const maxOf = (key: Key) => Math.max(...rows.map((r) => value(r, key)));
 
   return (
-    <>
+    <NameGroup>
       <section aria-labelledby="best-heading">
         <h2 id="best-heading" className="headline">
           With perfect lineups through week {week}
@@ -155,6 +155,6 @@ export function Season({ data, season, league, week }: Props) {
         Offense, defense and kicker count the players of the perfect lineup by the slot they would play. Per week is
         the perfect total divided by the weeks with a saved lineup; On bench is perfect minus actual.
       </p>
-    </>
+    </NameGroup>
   );
 }

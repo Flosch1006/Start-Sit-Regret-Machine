@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { TeamLogo } from "../components/TeamLogo";
-import { TeamName } from "../components/TeamName";
+import { NameGroup, TeamName } from "../components/TeamName";
 import { fmt } from "../lib/data";
 import { benchPoints, flips, outcome } from "../lib/results";
 import { buildHash } from "../lib/route";
@@ -54,7 +54,7 @@ export function Schedule({ data, season, league, week }: Props) {
   }
 
   return (
-    <>
+    <NameGroup>
       <p className="legend">
         <span className="legend-key">
           <strong>White</strong> actual score
@@ -105,6 +105,6 @@ export function Schedule({ data, season, league, week }: Props) {
           </section>
         );
       })}
-    </>
+    </NameGroup>
   );
 }
