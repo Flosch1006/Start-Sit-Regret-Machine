@@ -26,3 +26,16 @@ Connect this repository in Cloudflare Pages and use:
 | Build output directory | `web/dist` |
 
 Then add the custom domain under *Custom domains*. Every push to the branch deploys a new version. After the scraper and solver have written new files to `data/`, commit and push them and the site updates itself.
+
+## Scraper and solver
+
+`src/scraper.py` loads teams, schedule and weekly rosters from Fantrax, `src/lineup_solver.py` computes the perfect lineups. Both take the league weeks of the season from `src/season.py` (currently 2026).
+
+The roster request needs a logged-in Fantrax session. Pass it as the environment variable `FANTRAX_COOKIES` (the value of the `Cookie` header of a logged-in fantrax.com request, `name=value; name2=value2`); never put it in the code. For the GitHub Action, store it as the repository secret `FANTRAX_COOKIES`.
+
+```bash
+export FANTRAX_COOKIES='name=value; name2=value2'
+python src/scraper.py && python src/lineup_solver.py
+```
+
+The scraper only loads weeks beyond `scraper_progress` in `data/leagues.json`. For a new season, set it back to `0` for each league first.

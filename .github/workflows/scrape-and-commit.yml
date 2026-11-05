@@ -31,6 +31,8 @@ jobs:
       # 4️⃣ Run scraper
       - name: Run scraper
         run: python src/scraper.py
+        env:
+          FANTRAX_COOKIES: ${{ secrets.FANTRAX_COOKIES }}
 
       # 5️⃣ Run lineup solver
       - name: Run lineup solver

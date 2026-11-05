@@ -5,6 +5,7 @@ import os
 import pandas as pd
 from bs4 import BeautifulSoup
 from datetime import date
+from season import weeks
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "..", "data")
@@ -67,26 +68,26 @@ def get_teams(league_id):
     return teams
 
 
+def fantrax_cookies():
+    """Session cookies of a logged-in Fantrax account.
+
+    They are read from the FANTRAX_COOKIES environment variable in the format
+    of a browser Cookie header ("name=value; name2=value2") and never stored in the code.
+    """
+    raw = os.environ.get("FANTRAX_COOKIES", "").strip()
+    if not raw:
+        raise RuntimeError(
+            "FANTRAX_COOKIES is not set. Copy the Cookie header of a logged-in "
+            "fantrax.com request into this environment variable."
+        )
+    return dict(
+        part.strip().split("=", 1) for part in raw.split(";") if "=" in part
+    )
+
+
 # define function to get roster data
 def get_roster(league_id, team_id, period):
-    cookies = {
-        '_ga': 'GA1.2.1929504233.1663095358',
-        'uig': '9bhil2qjl80k18ln',
-        'ui': 'k5l1hhqbjr1v6akw',
-        'FX_RM': 'Rmxvc2NoMTAwNjoxOTc4NDU1MzcxMzE2OjkyZDYwNzE3N2IyMDU3NjZmMmJhZmI3OTVjOTMxNzE4',
-        'fs.bot.check': 'true',
-        'fs.session.id': 'ad04e8ba-c818-48ba-a28c-e8c5ff07790b',
-        '_awl': '2.1666905742.0.5-d8ad96a0981a2e2ef32dd755140767bb-6763652d6575726f70652d7765737431-3',
-        'cto_bundle': '20WIiF9Oa3BhODVjY0RVVWpod082d0JSSWJ2ekl4YlBiWFdydUx0MXRxQlIxS2hXaGtnRnowOU9nT1pqOHdpNTAzJTJGMVVjcDRYJTJGJTJCcjZiJTJGUzNrYW43Q2s1eXNZTUs0Wmk2eVgyeXBDVFd1dzM2MmgzSkF6U3JFMVdtTnRVdGJJZ0tMNndEUml4bG1wdnNmVndHSUZKJTJCT0RNZ0VnJTNEJTNE',
-        'cto_bidid': 'OjckEF9sODYyZ3c0U3Zycnk1c1hHZEs5SGY1MXRDNmJpWTVaeVZyR3ZDVVglMkIlMkZNdWxlcWxqTnY2akpYbmNqNkdIdTJYeW42MElCaUpUVEVMeFE0UEszOTcxZ1NxJTJGQVVWTU5VRERrOXlpa2hVWVFPayUzRA',
-        '_gcl_au': '1.1.589149278.1670937777',
-        'euconsent-v2': 'CPkL3AAPkL3AAAKAtAENCvCgAAAAAH_AAAQAAAASIAJMNW4gC7MscGbQMIoEQIwrCQigUAEFAMLRAQAODgp2VgE-sIEACAUARgRAhwBRgQCAAASAJCIAJAiwQAAAiAQAAgAQCIQAMDAILACwMAgABANAxRCgAECQAyICIpTAgKgSCAlsqEEoKpDTCAKssAKARGwUACIJARSAAICwcAwRICViwQJMUb5ACMEKAUSoVAIAAAAA.YAAAAAAAAAAA',
-        'addtl_consent': '1~',
-        '_gid': 'GA1.2.305029977.1672594497',
-        'JSESSIONID': 'node0joqs70baovb5spkfd49szv6m453906.node0',
-        '_gat': '1',
-        '_gat_gtag_UA_5393701_1': '1',
-    }
+    cookies = fantrax_cookies()
 
     headers = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
@@ -315,26 +316,6 @@ def load_data(league: dict, period:int):
             json.dump(roster.to_dict(orient="records"), f, indent=4)
 
 
-# define league weeks
-weeks = {
-    "1": date(2025, 9, 9),
-    "2": date(2025, 9, 16),
-    "3": date(2025, 9, 23),
-    "4": date(2025, 9, 30),
-    "5": date(2025, 10, 7),
-    "6": date(2025, 10, 14),
-    "7": date(2025, 10, 21),
-    "8": date(2025, 10, 28),
-    "9": date(2025, 11, 4),
-    "10": date(2025, 11, 11),
-    "11": date(2025, 11, 18),
-    "12": date(2025, 11, 25),
-    "13": date(2025, 12, 2),
-    "14": date(2025, 12, 9),
-    "15": date(2025, 12, 16),
-    "16": date(2025, 12, 23),
-    "17": date(2025, 12, 30),
-}
 
 # get current week
 today = date.today()

@@ -2,6 +2,7 @@ import json
 import os
 import pandas as pd
 from datetime import date
+from season import weeks
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "..", "data")
@@ -9,27 +10,6 @@ DATA_DIR = os.path.join(BASE_DIR, "..", "data")
 # read league data
 with open(os.path.join(DATA_DIR, "leagues.json"), "r") as f:
     league_data = json.load(f)
-
-# define league weeks
-weeks = {
-    "1": date(2025, 9, 9),
-    "2": date(2025, 9, 16),
-    "3": date(2025, 9, 23),
-    "4": date(2025, 9, 30),
-    "5": date(2025, 10, 7),
-    "6": date(2025, 10, 14),
-    "7": date(2025, 10, 21),
-    "8": date(2025, 10, 28),
-    "9": date(2025, 11, 4),
-    "10": date(2025, 11, 11),
-    "11": date(2025, 11, 18),
-    "12": date(2025, 11, 25),
-    "13": date(2025, 12, 2),
-    "14": date(2025, 12, 9),
-    "15": date(2025, 12, 16),
-    "16": date(2025, 12, 23),
-    "17": date(2025, 12, 30),
-}
 
 # get current week
 today = date.today()
