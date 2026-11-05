@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { TeamLogo } from "../components/TeamLogo";
+import { TeamName } from "../components/TeamName";
 import { fmt, loadWeek } from "../lib/data";
 import { computeTotals, type TotalsRow } from "../lib/totals";
 import type { LeagueData, Team } from "../lib/types";
@@ -56,7 +57,7 @@ function Best({ title, row, team, points }: BestProps) {
       <span className="best-title">{title}</span>
       <span className="best-team">
         <TeamLogo team={team} size={48} />
-        <span>{team?.name ?? row.shortName}</span>
+        <TeamName name={team?.name ?? row.shortName} shortName={row.shortName} />
       </span>
       <span className="best-points">{fmt(points)}</span>
     </li>
@@ -132,7 +133,7 @@ export function Season({ data, season, league, week }: Props) {
                   <th scope="row" className="team">
                     <span className="team-cell">
                       <TeamLogo team={team} />
-                      <span>{team?.name ?? r.shortName}</span>
+                      <TeamName name={team?.name ?? r.shortName} shortName={r.shortName} />
                     </span>
                   </th>
                   {COLUMNS.map((c) => {

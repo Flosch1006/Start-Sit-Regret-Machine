@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { TeamLogo } from "../components/TeamLogo";
+import { TeamName } from "../components/TeamName";
 import { fmt, loadWeek } from "../lib/data";
 import { buildSwaps, lineupTotals, perfectLineup } from "../lib/lineups";
 import { actualWinner, flips, perfectWinner } from "../lib/results";
@@ -38,7 +39,8 @@ interface LineupProps {
 function TeamLineup({ side, roster, league, week, team }: LineupProps) {
   const title = (
     <h3 className="team-title">
-      <TeamLogo team={team} size={72} /> {nickname(side.name)}
+      <TeamLogo team={team} size={72} />
+      <TeamName name={nickname(side.name)} shortName={side.shortName} />
     </h3>
   );
   if (!roster) {
@@ -194,7 +196,8 @@ export function Matchups({ data, season, league, week, match, onMatch }: Props) 
       <section aria-label="Result" className="duel">
         <div className="duel-side">
           <span className="duel-team">
-            <TeamLogo team={team(game.home.shortName)} size={64} /> {nickname(game.home.name)}
+            <TeamLogo team={team(game.home.shortName)} size={64} />
+            <TeamName name={nickname(game.home.name)} shortName={game.home.shortName} />
           </span>
           <span className="duel-score">{game.home.actual === null ? "–" : fmt(game.home.actual)}</span>
           <span className="duel-perfect">perfect {game.home.perfect === null ? "–" : fmt(game.home.perfect)}</span>
@@ -202,7 +205,8 @@ export function Matchups({ data, season, league, week, match, onMatch }: Props) 
         <span className="duel-vs" aria-hidden="true">vs</span>
         <div className="duel-side">
           <span className="duel-team">
-            <TeamLogo team={team(game.away.shortName)} size={64} /> {nickname(game.away.name)}
+            <TeamLogo team={team(game.away.shortName)} size={64} />
+            <TeamName name={nickname(game.away.name)} shortName={game.away.shortName} />
           </span>
           <span className="duel-score">{game.away.actual === null ? "–" : fmt(game.away.actual)}</span>
           <span className="duel-perfect">perfect {game.away.perfect === null ? "–" : fmt(game.away.perfect)}</span>

@@ -350,6 +350,48 @@ td.loss {
   }
 }
 
+/* team names never wrap: full name while it fits, short name otherwise (see TeamName) */
+.team-name {
+  position: relative;
+  display: block;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.team-name-full {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.team-cell {
+  min-width: 0;
+}
+
+.team-title,
+.duel-team {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.duel-team {
+  align-self: stretch;
+}
+
+.duel-side {
+  min-width: 0;
+}
+
+.duel-side:last-child .duel-team {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
 /* team logos sit inline next to the name */
 .logo {
   display: inline-block;
@@ -483,8 +525,9 @@ th[aria-sort="ascending"] .sort {
     left: 0;
     z-index: 1;
     background: var(--bg);
-    white-space: normal;
+    width: 150px;
     min-width: 150px;
+    max-width: 150px;
   }
 
   .totals-table .logo {

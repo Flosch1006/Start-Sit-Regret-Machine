@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { TeamLogo } from "../components/TeamLogo";
+import { TeamName } from "../components/TeamName";
 import { fmt } from "../lib/data";
 import { benchPoints, flips, outcome } from "../lib/results";
 import { buildHash } from "../lib/route";
@@ -26,7 +27,7 @@ function TeamRow({ side, other, team }: RowProps) {
     <div className={`score-row ${result}`}>
       <span className="score-team">
         <TeamLogo team={team} size={56} />
-        <span className="score-name">{side.name}</span>
+        <TeamName name={side.name} shortName={side.shortName} />
       </span>
       <span className="score-actual num">{score(side.actual)}</span>
       <span className="score-perfect num" title="Score with a perfect lineup">
