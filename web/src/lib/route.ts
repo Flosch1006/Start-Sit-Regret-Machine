@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
-export const VIEWS = ["standings", "schedule", "matchups"] as const;
+export const VIEWS = ["standings", "season", "schedule", "matchups"] as const;
 export type View = (typeof VIEWS)[number];
 
 /** Everything the address bar remembers, so a link opens the same league, week and matchup. */

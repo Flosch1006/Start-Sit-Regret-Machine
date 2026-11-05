@@ -392,6 +392,107 @@ td.loss {
 }
 
 /* schedule: scoreboard cards */
+/* season totals with perfect lineups */
+.best-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 12px;
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.best {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--regret);
+  border-radius: var(--radius);
+}
+
+.best-title {
+  color: var(--regret);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.best-team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.best-points {
+  font-size: 2rem;
+  font-stretch: 68%;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.totals-table th,
+.totals-table td {
+  padding-block: 6px;
+}
+
+.totals-table .team {
+  white-space: nowrap;
+}
+
+.totals-table .rank {
+  color: var(--ink-dim);
+}
+
+.totals-table td.is-best {
+  color: var(--bg);
+  background: var(--regret);
+  font-weight: 800;
+}
+
+.sort {
+  padding: 4px 0;
+  color: inherit;
+  background: none;
+  border: 0;
+  font: inherit;
+  font-weight: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.sort:hover {
+  color: var(--ink);
+}
+
+th[aria-sort="descending"] .sort,
+th[aria-sort="ascending"] .sort {
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  /* phone: the team stays visible while the numbers scroll sideways */
+  .totals-table .team {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--bg);
+    white-space: normal;
+    min-width: 150px;
+  }
+
+  .totals-table .logo {
+    width: 32px;
+    height: 32px;
+  }
+}
+
 .week-head {
   display: flex;
   flex-wrap: wrap;
