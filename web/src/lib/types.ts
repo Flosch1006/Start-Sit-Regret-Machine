@@ -11,8 +11,14 @@ export interface LeagueMeta {
   slots: Slot[];
 }
 
-export interface Index {
+export interface SeasonMeta {
+  season: number;
   leagues: LeagueMeta[];
+}
+
+export interface Index {
+  /** newest season first; only seasons with scraped weeks */
+  seasons: SeasonMeta[];
 }
 
 export interface Team {

@@ -6,6 +6,7 @@ import type { LeagueData, LeagueMeta, RosterPlayer, Side } from "../lib/types";
 
 interface Props {
   data: LeagueData;
+  season: number;
   league: LeagueMeta;
   week: number;
   match: number;
@@ -72,9 +73,9 @@ function TeamLineup({ side, roster, league, week, emoji }: LineupProps) {
   );
 }
 
-export function Matchups({ data, league, week, match, onMatch }: Props) {
+export function Matchups({ data, season, league, week, match, onMatch }: Props) {
   const games = useMemo(() => data.games.filter((g) => g.period === week), [data.games, week]);
-  const rosters = useAsync(() => loadWeek(league.shortName, week), [league.shortName, week]);
+  const rosters = useAsync(() => loadWeek(season, league.shortName, week), [season, league.shortName, week]);
   const emoji = (shortName: string) => data.teams.find((t) => t.shortName === shortName)?.emoji ?? "";
 
   if (games.length === 0) {

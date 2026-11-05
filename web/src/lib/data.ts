@@ -17,8 +17,9 @@ function load<T>(path: string): Promise<T> {
 }
 
 export const loadIndex = () => load<Index>("index.json");
-export const loadLeague = (shortName: string) => load<LeagueData>(`${shortName}/league.json`);
-export const loadWeek = (shortName: string, week: number) => load<WeekRosters>(`${shortName}/week-${week}.json`);
+export const loadLeague = (season: number, shortName: string) => load<LeagueData>(`${season}/${shortName}/league.json`);
+export const loadWeek = (season: number, shortName: string, week: number) =>
+  load<WeekRosters>(`${season}/${shortName}/week-${week}.json`);
 
 export const fmt = (n: number) =>
   n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });

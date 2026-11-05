@@ -2,10 +2,10 @@ import json
 import os
 import pandas as pd
 from datetime import date
-from season import weeks
+from season import SEASON, weeks
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, "..", "data")
+DATA_DIR = os.path.join(BASE_DIR, "..", "data", str(SEASON))
 
 # read league data
 with open(os.path.join(DATA_DIR, "leagues.json"), "r") as f:
@@ -21,6 +21,12 @@ for week, start in weeks.items():
 # iterate over leagues
 for league in league_data.values():
 
+    # only weeks the scraper has loaded so far
+    last_week = min(current_week or 0, league["scraper_progress"])
+    if last_week == 0:
+        print(f"League {league['short_name']}: no scraped weeks for season {SEASON} yet, skipped")
+        continue
+
     # compile path
     path = os.path.join(DATA_DIR, league['short_name'])
 
@@ -29,7 +35,7 @@ for league in league_data.values():
         teams = json.load(f)
 
     # iterate over period
-    for period in range(1,current_week + 1):
+    for period in range(1, last_week + 1):
 
         period_summaries = []
 

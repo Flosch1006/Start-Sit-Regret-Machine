@@ -5,10 +5,23 @@ import os
 import pandas as pd
 from bs4 import BeautifulSoup
 from datetime import date
-from season import weeks
+from season import SEASON, weeks
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, "..", "data")
+DATA_DIR = os.path.join(BASE_DIR, "..", "data", str(SEASON))
+
+# Version of the Fantrax web client. Fantrax rejects old versions with the error
+# STALE_CLIENT. Then copy the current value: open fantrax.com, DevTools -> Network,
+# click any request to /fxpa/req and read the field "v" of its payload.
+FANTRAX_CLIENT_VERSION = "188.1.5"
+
+
+def check_fantrax_response(body):
+    """Fail with a readable message when Fantrax rejects a request."""
+    error = body.get("pageError")
+    if error:
+        raise RuntimeError(f"Fantrax rejected the request ({error.get('code')}): {error.get('text')}")
+    return body
 
 # define functions to get teams
 def get_teams(league_id):
@@ -39,16 +52,15 @@ def get_teams(league_id):
                 }
             }
         ],
-        "ng2": True,
+        "uiv": 3,
         "refUrl": f"https://www.fantrax.com/fantasy/league/{league_id}/standings",
         "dt": 0,
         "at": 0,
-        "av": None,
         "tz": "Europe/Berlin",
-        "v": "73.0.0"}
+        "v": FANTRAX_CLIENT_VERSION}
 
     # execute api request
-    response = requests.post('https://www.fantrax.com/fxpa/req', params=params, headers=headers, data=str(data))
+    response = requests.post('https://www.fantrax.com/fxpa/req', params=params, headers=headers, data=json.dumps(data))
 
     # convert response to soup
     soup = BeautifulSoup(response.content, "html.parser")
@@ -57,7 +69,7 @@ def get_teams(league_id):
     json_string = soup.text
 
     # convert json string to dict
-    df = json.loads(json_string)
+    df = check_fantrax_response(json.loads(json_string))
 
     # extract team data
     teams = df["responses"][0]["data"]["fantasyTeamInfo"]
@@ -109,14 +121,16 @@ def get_roster(league_id, team_id, period):
         f"https://www.fantrax.com/fxpa/req?leagueId={league_id}",
         cookies=cookies,
         headers=headers,
-        data=str({
+        data=json.dumps({
             "msgs":[
                 {
                     "method": "getTeamRosterInfo",
                      "data": {
                          "leagueId": league_id,
                          "teamId": team_id,
-                         "period": period
+                         "period": period,
+                         # without this Fantrax uses the view saved in the account (e.g. season to date)
+                         "timeframeTypeCode": "BY_PERIOD"
                      }
                  }
             ],
@@ -124,9 +138,8 @@ def get_roster(league_id, team_id, period):
             "refUrl": f"https://www.fantrax.com/fantasy/league/{league_id}/team/roster;teamId={team_id};period={period}",
             "dt": 0,
             "at": 0,
-            "av": "0.0",
             "tz": "Europe/Berlin",
-            "v": "167.0.1"
+            "v": FANTRAX_CLIENT_VERSION
         })
     )
 
@@ -139,7 +152,7 @@ def get_roster(league_id, team_id, period):
     }
 
     # convert response to json
-    data = response.json()
+    data = check_fantrax_response(response.json())
 
     scorings = []
 
@@ -234,16 +247,15 @@ def get_schedule(league_id):
                 }
             }
         ],
-        "ng2": True,
+        "uiv": 3,
         "refUrl": f"https://www.fantrax.com/fantasy/league/{league_id}/standings",
         "dt": 0,
         "at": 0,
-        "av": None,
         "tz": "Europe/Berlin",
-        "v": "73.0.0"}
+        "v": FANTRAX_CLIENT_VERSION}
 
     # execute api request
-    response = requests.post('https://www.fantrax.com/fxpa/req', params=params, headers=headers, data=str(data))
+    response = requests.post('https://www.fantrax.com/fxpa/req', params=params, headers=headers, data=json.dumps(data))
 
     # convert response to soup
     soup = BeautifulSoup(response.content, "html.parser")
@@ -252,7 +264,7 @@ def get_schedule(league_id):
     json_string = soup.text
 
     # convert json string to dict
-    json_raw = json.loads(json_string)
+    json_raw = check_fantrax_response(json.loads(json_string))
 
     # create list to store matchups
     matchup_list = []
@@ -289,7 +301,29 @@ with open(os.path.join(DATA_DIR, "leagues.json"), "r") as f:
 
 
 # get data for specific week
+def keep_emojis(league: dict, teams: list):
+    """Fantrax does not deliver the team emojis, so carry over the ones we already have
+    (last season first, this season overrides)."""
+    known = {}
+    for season in (SEASON - 1, SEASON):
+        path = os.path.join(DATA_DIR, "..", str(season), league["short_name"], "teams.json")
+        if os.path.exists(path):
+            with open(path, "r") as f:
+                for team in json.load(f):
+                    if team.get("emoji"):
+                        known[team["id"]] = team["emoji"]
+                        known[team["shortName"]] = team["emoji"]
+    for team in teams:
+        emoji = known.get(team["id"]) or known.get(team["shortName"])
+        if emoji:
+            team["emoji"] = emoji
+    return teams
+
+
 def load_data(league: dict, period:int):
+
+    # make sure the folders of the league exist
+    os.makedirs(os.path.join(DATA_DIR, league["short_name"], "rosters"), exist_ok=True)
 
     # get schedule
     schedule = get_schedule(league["id"])
@@ -299,7 +333,7 @@ def load_data(league: dict, period:int):
         json.dump(schedule, f, indent=4)
 
     # get fantrax team data
-    teams = get_teams(league["id"])
+    teams = keep_emojis(league, get_teams(league["id"]))
 
     # save team data
     with open(os.path.join(DATA_DIR, league["short_name"], "teams.json"), "w") as f:
@@ -327,6 +361,9 @@ for week, start in weeks.items():
 # compare against scraping results
 if current_week:
     for name, league in league_data.items():
+        if not league["id"]:
+            print(f"League {league['short_name']}: no Fantrax league id for season {SEASON} in leagues.json yet, skipped")
+            continue
         if current_week > league["scraper_progress"]:
             for period in range(league["scraper_progress"] + 1, current_week + 1):
                 print(f"Get Data for {league['short_name']} - Week {period}")
@@ -335,7 +372,7 @@ if current_week:
                 # update progress
                 with open(os.path.join(DATA_DIR, "leagues.json"), "r") as f:
                     update = json.load(f)
-                update[name]["scraper_progress"] = current_week
+                update[name]["scraper_progress"] = period
                 with open(os.path.join(DATA_DIR, "leagues.json"), "w") as f:
                     json.dump(update, f, indent=4)
         else:

@@ -1,0 +1,25 @@
+{
+    "DLDAFG": {
+        "id": "24nf2ntmml5b1dxg",
+        "short_name": "dldafg",
+        "roster": {
+            "QB": 1,
+            "RB": 2,
+            "WR": 3,
+            "TE": 2,
+            "RWT": 2,
+            "SFX": 1,
+            "DT": 2,
+            "LB": 2,
+            "ER": 2,
+            "CB": 2,
+            "S": 2,
+            "ID": 1,
+            "K": 1
+        },
+        "result_height": 39,
+        "reg_season_end": 14,
+        "matchup_df_height": 37,
+        "scraper_progress": 0
+    }
+}

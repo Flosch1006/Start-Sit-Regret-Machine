@@ -6,6 +6,7 @@ export type View = (typeof VIEWS)[number];
 /** Everything the address bar remembers, so a link opens the same league, week and matchup. */
 export interface Route {
   view: View;
+  season: number | null;
   league: string | null;
   week: number | null;
   match: number;
@@ -14,10 +15,12 @@ export interface Route {
 export function parseHash(hash: string): Route {
   const [path = "", query = ""] = hash.replace(/^#\/?/, "").split("?");
   const params = new URLSearchParams(query);
+  const season = Number(params.get("season"));
   const week = Number(params.get("week"));
   const match = Number(params.get("match"));
   return {
     view: VIEWS.find((v) => v === path) ?? "standings",
+    season: Number.isInteger(season) && season > 0 ? season : null,
     league: params.get("league"),
     week: Number.isInteger(week) && week > 0 ? week : null,
     match: Number.isInteger(match) && match > 0 ? match : 0,
@@ -26,6 +29,7 @@ export function parseHash(hash: string): Route {
 
 export function buildHash(route: Route): string {
   const params = new URLSearchParams();
+  if (route.season) params.set("season", String(route.season));
   if (route.league) params.set("league", route.league);
   if (route.week) params.set("week", String(route.week));
   if (route.view === "matchups" && route.match > 0) params.set("match", String(route.match));
