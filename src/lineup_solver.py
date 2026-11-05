@@ -30,6 +30,9 @@ for league in league_data.values():
     # compile path
     path = os.path.join(DATA_DIR, league['short_name'])
 
+    # make sure the output folder exists (new seasons start without it)
+    os.makedirs(os.path.join(path, "periods"), exist_ok=True)
+
     # read team data
     with open(os.path.join(path, "teams.json"), "r") as f:
         teams = json.load(f)

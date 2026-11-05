@@ -1,0 +1,590 @@
+[
+    {
+        "period": 1,
+        "home_team_id": "5kl8mzq2ml5b1dxl",
+        "home_team_name": "Bogland Ballers",
+        "away_team_id": "4ybkuy2cml5b1dxo",
+        "away_team_name": "Ostwestfalen Outlaws"
+    },
+    {
+        "period": 1,
+        "home_team_id": "f24u3nddml5b1dxm",
+        "home_team_name": "Rheinhessen Phantoms",
+        "away_team_id": "g54vtpmkml5b1dxl",
+        "away_team_name": "DaFlow Titans"
+    },
+    {
+        "period": 1,
+        "home_team_id": "ohuphg7rml5b1dxm",
+        "home_team_name": "Browller Beasts",
+        "away_team_id": "nptbknm3ml5b1dxo",
+        "away_team_name": "Weinheim Cameleers"
+    },
+    {
+        "period": 1,
+        "home_team_id": "2euxspujml5b1dxn",
+        "home_team_name": "MichiSCowboyz",
+        "away_team_id": "xyc39avwml5b1dxm",
+        "away_team_name": "Alst\u00e4tte Vikings"
+    },
+    {
+        "period": 1,
+        "home_team_id": "kk4fsy6yml5b1dxn",
+        "home_team_name": "Mayence Millenials",
+        "away_team_id": "9iz2wyv5ml5b1dxo",
+        "away_team_name": "Mighty Mustaches"
+    },
+    {
+        "period": 1,
+        "home_team_id": "qzy4n74dml5b1dxl",
+        "home_team_name": "Erdinger Elephants",
+        "away_team_id": "u0sxyxewml5b1dxn",
+        "away_team_name": "Bielefeld Bluefyns"
+    },
+    {
+        "period": 2,
+        "home_team_id": "xyc39avwml5b1dxm",
+        "home_team_name": "Alst\u00e4tte Vikings",
+        "away_team_id": "4ybkuy2cml5b1dxo",
+        "away_team_name": "Ostwestfalen Outlaws"
+    },
+    {
+        "period": 2,
+        "home_team_id": "9iz2wyv5ml5b1dxo",
+        "home_team_name": "Mighty Mustaches",
+        "away_team_id": "g54vtpmkml5b1dxl",
+        "away_team_name": "DaFlow Titans"
+    },
+    {
+        "period": 2,
+        "home_team_id": "u0sxyxewml5b1dxn",
+        "home_team_name": "Bielefeld Bluefyns",
+        "away_team_id": "nptbknm3ml5b1dxo",
+        "away_team_name": "Weinheim Cameleers"
+    },
+    {
+        "period": 2,
+        "home_team_id": "2euxspujml5b1dxn",
+        "home_team_name": "MichiSCowboyz",
+        "away_team_id": "5kl8mzq2ml5b1dxl",
+        "away_team_name": "Bogland Ballers"
+    },
+    {
+        "period": 2,
+        "home_team_id": "kk4fsy6yml5b1dxn",
+        "home_team_name": "Mayence Millenials",
+        "away_team_id": "f24u3nddml5b1dxm",
+        "away_team_name": "Rheinhessen Phantoms"
+    },
+    {
+        "period": 2,
+        "home_team_id": "qzy4n74dml5b1dxl",
+        "home_team_name": "Erdinger Elephants",
+        "away_team_id": "ohuphg7rml5b1dxm",
+        "away_team_name": "Browller Beasts"
+    },
+    {
+        "period": 3,
+        "home_team_id": "4ybkuy2cml5b1dxo",
+        "home_team_name": "Ostwestfalen Outlaws",
+        "away_team_id": "2euxspujml5b1dxn",
+        "away_team_name": "MichiSCowboyz"
+    },
+    {
+        "period": 3,
+        "home_team_id": "g54vtpmkml5b1dxl",
+        "home_team_name": "DaFlow Titans",
+        "away_team_id": "kk4fsy6yml5b1dxn",
+        "away_team_name": "Mayence Millenials"
+    },
+    {
+        "period": 3,
+        "home_team_id": "nptbknm3ml5b1dxo",
+        "home_team_name": "Weinheim Cameleers",
+        "away_team_id": "qzy4n74dml5b1dxl",
+        "away_team_name": "Erdinger Elephants"
+    },
+    {
+        "period": 3,
+        "home_team_id": "5kl8mzq2ml5b1dxl",
+        "home_team_name": "Bogland Ballers",
+        "away_team_id": "xyc39avwml5b1dxm",
+        "away_team_name": "Alst\u00e4tte Vikings"
+    },
+    {
+        "period": 3,
+        "home_team_id": "f24u3nddml5b1dxm",
+        "home_team_name": "Rheinhessen Phantoms",
+        "away_team_id": "9iz2wyv5ml5b1dxo",
+        "away_team_name": "Mighty Mustaches"
+    },
+    {
+        "period": 3,
+        "home_team_id": "ohuphg7rml5b1dxm",
+        "home_team_name": "Browller Beasts",
+        "away_team_id": "u0sxyxewml5b1dxn",
+        "away_team_name": "Bielefeld Bluefyns"
+    },
+    {
+        "period": 4,
+        "home_team_id": "9iz2wyv5ml5b1dxo",
+        "home_team_name": "Mighty Mustaches",
+        "away_team_id": "4ybkuy2cml5b1dxo",
+        "away_team_name": "Ostwestfalen Outlaws"
+    },
+    {
+        "period": 4,
+        "home_team_id": "kk4fsy6yml5b1dxn",
+        "home_team_name": "Mayence Millenials",
+        "away_team_id": "5kl8mzq2ml5b1dxl",
+        "away_team_name": "Bogland Ballers"
+    },
+    {
+        "period": 4,
+        "home_team_id": "nptbknm3ml5b1dxo",
+        "home_team_name": "Weinheim Cameleers",
+        "away_team_id": "xyc39avwml5b1dxm",
+        "away_team_name": "Alst\u00e4tte Vikings"
+    },
+    {
+        "period": 4,
+        "home_team_id": "ohuphg7rml5b1dxm",
+        "home_team_name": "Browller Beasts",
+        "away_team_id": "2euxspujml5b1dxn",
+        "away_team_name": "MichiSCowboyz"
+    },
+    {
+        "period": 4,
+        "home_team_id": "u0sxyxewml5b1dxn",
+        "home_team_name": "Bielefeld Bluefyns",
+        "away_team_id": "g54vtpmkml5b1dxl",
+        "away_team_name": "DaFlow Titans"
+    },
+    {
+        "period": 4,
+        "home_team_id": "qzy4n74dml5b1dxl",
+        "home_team_name": "Erdinger Elephants",
+        "away_team_id": "f24u3nddml5b1dxm",
+        "away_team_name": "Rheinhessen Phantoms"
+    },
+    {
+        "period": 5,
+        "home_team_id": "4ybkuy2cml5b1dxo",
+        "home_team_name": "Ostwestfalen Outlaws",
+        "away_team_id": "kk4fsy6yml5b1dxn",
+        "away_team_name": "Mayence Millenials"
+    },
+    {
+        "period": 5,
+        "home_team_id": "5kl8mzq2ml5b1dxl",
+        "home_team_name": "Bogland Ballers",
+        "away_team_id": "u0sxyxewml5b1dxn",
+        "away_team_name": "Bielefeld Bluefyns"
+    },
+    {
+        "period": 5,
+        "home_team_id": "xyc39avwml5b1dxm",
+        "home_team_name": "Alst\u00e4tte Vikings",
+        "away_team_id": "ohuphg7rml5b1dxm",
+        "away_team_name": "Browller Beasts"
+    },
+    {
+        "period": 5,
+        "home_team_id": "2euxspujml5b1dxn",
+        "home_team_name": "MichiSCowboyz",
+        "away_team_id": "9iz2wyv5ml5b1dxo",
+        "away_team_name": "Mighty Mustaches"
+    },
+    {
+        "period": 5,
+        "home_team_id": "g54vtpmkml5b1dxl",
+        "home_team_name": "DaFlow Titans",
+        "away_team_id": "qzy4n74dml5b1dxl",
+        "away_team_name": "Erdinger Elephants"
+    },
+    {
+        "period": 5,
+        "home_team_id": "f24u3nddml5b1dxm",
+        "home_team_name": "Rheinhessen Phantoms",
+        "away_team_id": "nptbknm3ml5b1dxo",
+        "away_team_name": "Weinheim Cameleers"
+    },
+    {
+        "period": 6,
+        "home_team_id": "qzy4n74dml5b1dxl",
+        "home_team_name": "Erdinger Elephants",
+        "away_team_id": "4ybkuy2cml5b1dxo",
+        "away_team_name": "Ostwestfalen Outlaws"
+    },
+    {
+        "period": 6,
+        "home_team_id": "9iz2wyv5ml5b1dxo",
+        "home_team_name": "Mighty Mustaches",
+        "away_team_id": "5kl8mzq2ml5b1dxl",
+        "away_team_name": "Bogland Ballers"
+    },
+    {
+        "period": 6,
+        "home_team_id": "kk4fsy6yml5b1dxn",
+        "home_team_name": "Mayence Millenials",
+        "away_team_id": "xyc39avwml5b1dxm",
+        "away_team_name": "Alst\u00e4tte Vikings"
+    },
+    {
+        "period": 6,
+        "home_team_id": "nptbknm3ml5b1dxo",
+        "home_team_name": "Weinheim Cameleers",
+        "away_team_id": "2euxspujml5b1dxn",
+        "away_team_name": "MichiSCowboyz"
+    },
+    {
+        "period": 6,
+        "home_team_id": "ohuphg7rml5b1dxm",
+        "home_team_name": "Browller Beasts",
+        "away_team_id": "g54vtpmkml5b1dxl",
+        "away_team_name": "DaFlow Titans"
+    },
+    {
+        "period": 6,
+        "home_team_id": "u0sxyxewml5b1dxn",
+        "home_team_name": "Bielefeld Bluefyns",
+        "away_team_id": "f24u3nddml5b1dxm",
+        "away_team_name": "Rheinhessen Phantoms"
+    },
+    {
+        "period": 7,
+        "home_team_id": "f24u3nddml5b1dxm",
+        "home_team_name": "Rheinhessen Phantoms",
+        "away_team_id": "4ybkuy2cml5b1dxo",
+        "away_team_name": "Ostwestfalen Outlaws"
+    },
+    {
+        "period": 7,
+        "home_team_id": "g54vtpmkml5b1dxl",
+        "home_team_name": "DaFlow Titans",
+        "away_team_id": "xyc39avwml5b1dxm",
+        "away_team_name": "Alst\u00e4tte Vikings"
+    },
+    {
+        "period": 7,
+        "home_team_id": "nptbknm3ml5b1dxo",
+        "home_team_name": "Weinheim Cameleers",
+        "away_team_id": "5kl8mzq2ml5b1dxl",
+        "away_team_name": "Bogland Ballers"
+    },
+    {
+        "period": 7,
+        "home_team_id": "u0sxyxewml5b1dxn",
+        "home_team_name": "Bielefeld Bluefyns",
+        "away_team_id": "2euxspujml5b1dxn",
+        "away_team_name": "MichiSCowboyz"
+    },
+    {
+        "period": 7,
+        "home_team_id": "ohuphg7rml5b1dxm",
+        "home_team_name": "Browller Beasts",
+        "away_team_id": "kk4fsy6yml5b1dxn",
+        "away_team_name": "Mayence Millenials"
+    },
+    {
+        "period": 7,
+        "home_team_id": "qzy4n74dml5b1dxl",
+        "home_team_name": "Erdinger Elephants",
+        "away_team_id": "9iz2wyv5ml5b1dxo",
+        "away_team_name": "Mighty Mustaches"
+    },
+    {
+        "period": 8,
+        "home_team_id": "4ybkuy2cml5b1dxo",
+        "home_team_name": "Ostwestfalen Outlaws",
+        "away_team_id": "g54vtpmkml5b1dxl",
+        "away_team_name": "DaFlow Titans"
+    },
+    {
+        "period": 8,
+        "home_team_id": "2euxspujml5b1dxn",
+        "home_team_name": "MichiSCowboyz",
+        "away_team_id": "f24u3nddml5b1dxm",
+        "away_team_name": "Rheinhessen Phantoms"
+    },
+    {
+        "period": 8,
+        "home_team_id": "kk4fsy6yml5b1dxn",
+        "home_team_name": "Mayence Millenials",
+        "away_team_id": "nptbknm3ml5b1dxo",
+        "away_team_name": "Weinheim Cameleers"
+    },
+    {
+        "period": 8,
+        "home_team_id": "5kl8mzq2ml5b1dxl",
+        "home_team_name": "Bogland Ballers",
+        "away_team_id": "ohuphg7rml5b1dxm",
+        "away_team_name": "Browller Beasts"
+    },
+    {
+        "period": 8,
+        "home_team_id": "xyc39avwml5b1dxm",
+        "home_team_name": "Alst\u00e4tte Vikings",
+        "away_team_id": "qzy4n74dml5b1dxl",
+        "away_team_name": "Erdinger Elephants"
+    },
+    {
+        "period": 8,
+        "home_team_id": "9iz2wyv5ml5b1dxo",
+        "home_team_name": "Mighty Mustaches",
+        "away_team_id": "u0sxyxewml5b1dxn",
+        "away_team_name": "Bielefeld Bluefyns"
+    },
+    {
+        "period": 9,
+        "home_team_id": "ohuphg7rml5b1dxm",
+        "home_team_name": "Browller Beasts",
+        "away_team_id": "4ybkuy2cml5b1dxo",
+        "away_team_name": "Ostwestfalen Outlaws"
+    },
+    {
+        "period": 9,
+        "home_team_id": "nptbknm3ml5b1dxo",
+        "home_team_name": "Weinheim Cameleers",
+        "away_team_id": "9iz2wyv5ml5b1dxo",
+        "away_team_name": "Mighty Mustaches"
+    },
+    {
+        "period": 9,
+        "home_team_id": "f24u3nddml5b1dxm",
+        "home_team_name": "Rheinhessen Phantoms",
+        "away_team_id": "5kl8mzq2ml5b1dxl",
+        "away_team_name": "Bogland Ballers"
+    },
+    {
+        "period": 9,
+        "home_team_id": "g54vtpmkml5b1dxl",
+        "home_team_name": "DaFlow Titans",
+        "away_team_id": "2euxspujml5b1dxn",
+        "away_team_name": "MichiSCowboyz"
+    },
+    {
+        "period": 9,
+        "home_team_id": "qzy4n74dml5b1dxl",
+        "home_team_name": "Erdinger Elephants",
+        "away_team_id": "kk4fsy6yml5b1dxn",
+        "away_team_name": "Mayence Millenials"
+    },
+    {
+        "period": 9,
+        "home_team_id": "u0sxyxewml5b1dxn",
+        "home_team_name": "Bielefeld Bluefyns",
+        "away_team_id": "xyc39avwml5b1dxm",
+        "away_team_name": "Alst\u00e4tte Vikings"
+    },
+    {
+        "period": 10,
+        "home_team_id": "4ybkuy2cml5b1dxo",
+        "home_team_name": "Ostwestfalen Outlaws",
+        "away_team_id": "u0sxyxewml5b1dxn",
+        "away_team_name": "Bielefeld Bluefyns"
+    },
+    {
+        "period": 10,
+        "home_team_id": "5kl8mzq2ml5b1dxl",
+        "home_team_name": "Bogland Ballers",
+        "away_team_id": "qzy4n74dml5b1dxl",
+        "away_team_name": "Erdinger Elephants"
+    },
+    {
+        "period": 10,
+        "home_team_id": "xyc39avwml5b1dxm",
+        "home_team_name": "Alst\u00e4tte Vikings",
+        "away_team_id": "9iz2wyv5ml5b1dxo",
+        "away_team_name": "Mighty Mustaches"
+    },
+    {
+        "period": 10,
+        "home_team_id": "2euxspujml5b1dxn",
+        "home_team_name": "MichiSCowboyz",
+        "away_team_id": "kk4fsy6yml5b1dxn",
+        "away_team_name": "Mayence Millenials"
+    },
+    {
+        "period": 10,
+        "home_team_id": "g54vtpmkml5b1dxl",
+        "home_team_name": "DaFlow Titans",
+        "away_team_id": "nptbknm3ml5b1dxo",
+        "away_team_name": "Weinheim Cameleers"
+    },
+    {
+        "period": 10,
+        "home_team_id": "f24u3nddml5b1dxm",
+        "home_team_name": "Rheinhessen Phantoms",
+        "away_team_id": "ohuphg7rml5b1dxm",
+        "away_team_name": "Browller Beasts"
+    },
+    {
+        "period": 11,
+        "home_team_id": "4ybkuy2cml5b1dxo",
+        "home_team_name": "Ostwestfalen Outlaws",
+        "away_team_id": "nptbknm3ml5b1dxo",
+        "away_team_name": "Weinheim Cameleers"
+    },
+    {
+        "period": 11,
+        "home_team_id": "xyc39avwml5b1dxm",
+        "home_team_name": "Alst\u00e4tte Vikings",
+        "away_team_id": "f24u3nddml5b1dxm",
+        "away_team_name": "Rheinhessen Phantoms"
+    },
+    {
+        "period": 11,
+        "home_team_id": "5kl8mzq2ml5b1dxl",
+        "home_team_name": "Bogland Ballers",
+        "away_team_id": "g54vtpmkml5b1dxl",
+        "away_team_name": "DaFlow Titans"
+    },
+    {
+        "period": 11,
+        "home_team_id": "2euxspujml5b1dxn",
+        "home_team_name": "MichiSCowboyz",
+        "away_team_id": "qzy4n74dml5b1dxl",
+        "away_team_name": "Erdinger Elephants"
+    },
+    {
+        "period": 11,
+        "home_team_id": "kk4fsy6yml5b1dxn",
+        "home_team_name": "Mayence Millenials",
+        "away_team_id": "u0sxyxewml5b1dxn",
+        "away_team_name": "Bielefeld Bluefyns"
+    },
+    {
+        "period": 11,
+        "home_team_id": "9iz2wyv5ml5b1dxo",
+        "home_team_name": "Mighty Mustaches",
+        "away_team_id": "ohuphg7rml5b1dxm",
+        "away_team_name": "Browller Beasts"
+    },
+    {
+        "period": 12,
+        "home_team_id": "2euxspujml5b1dxn",
+        "home_team_name": "MichiSCowboyz",
+        "away_team_id": "4ybkuy2cml5b1dxo",
+        "away_team_name": "Ostwestfalen Outlaws"
+    },
+    {
+        "period": 12,
+        "home_team_id": "kk4fsy6yml5b1dxn",
+        "home_team_name": "Mayence Millenials",
+        "away_team_id": "g54vtpmkml5b1dxl",
+        "away_team_name": "DaFlow Titans"
+    },
+    {
+        "period": 12,
+        "home_team_id": "qzy4n74dml5b1dxl",
+        "home_team_name": "Erdinger Elephants",
+        "away_team_id": "nptbknm3ml5b1dxo",
+        "away_team_name": "Weinheim Cameleers"
+    },
+    {
+        "period": 12,
+        "home_team_id": "xyc39avwml5b1dxm",
+        "home_team_name": "Alst\u00e4tte Vikings",
+        "away_team_id": "5kl8mzq2ml5b1dxl",
+        "away_team_name": "Bogland Ballers"
+    },
+    {
+        "period": 12,
+        "home_team_id": "9iz2wyv5ml5b1dxo",
+        "home_team_name": "Mighty Mustaches",
+        "away_team_id": "f24u3nddml5b1dxm",
+        "away_team_name": "Rheinhessen Phantoms"
+    },
+    {
+        "period": 12,
+        "home_team_id": "u0sxyxewml5b1dxn",
+        "home_team_name": "Bielefeld Bluefyns",
+        "away_team_id": "ohuphg7rml5b1dxm",
+        "away_team_name": "Browller Beasts"
+    },
+    {
+        "period": 13,
+        "home_team_id": "4ybkuy2cml5b1dxo",
+        "home_team_name": "Ostwestfalen Outlaws",
+        "away_team_id": "xyc39avwml5b1dxm",
+        "away_team_name": "Alst\u00e4tte Vikings"
+    },
+    {
+        "period": 13,
+        "home_team_id": "g54vtpmkml5b1dxl",
+        "home_team_name": "DaFlow Titans",
+        "away_team_id": "9iz2wyv5ml5b1dxo",
+        "away_team_name": "Mighty Mustaches"
+    },
+    {
+        "period": 13,
+        "home_team_id": "nptbknm3ml5b1dxo",
+        "home_team_name": "Weinheim Cameleers",
+        "away_team_id": "u0sxyxewml5b1dxn",
+        "away_team_name": "Bielefeld Bluefyns"
+    },
+    {
+        "period": 13,
+        "home_team_id": "5kl8mzq2ml5b1dxl",
+        "home_team_name": "Bogland Ballers",
+        "away_team_id": "2euxspujml5b1dxn",
+        "away_team_name": "MichiSCowboyz"
+    },
+    {
+        "period": 13,
+        "home_team_id": "f24u3nddml5b1dxm",
+        "home_team_name": "Rheinhessen Phantoms",
+        "away_team_id": "kk4fsy6yml5b1dxn",
+        "away_team_name": "Mayence Millenials"
+    },
+    {
+        "period": 13,
+        "home_team_id": "ohuphg7rml5b1dxm",
+        "home_team_name": "Browller Beasts",
+        "away_team_id": "qzy4n74dml5b1dxl",
+        "away_team_name": "Erdinger Elephants"
+    },
+    {
+        "period": 14,
+        "home_team_id": "4ybkuy2cml5b1dxo",
+        "home_team_name": "Ostwestfalen Outlaws",
+        "away_team_id": "5kl8mzq2ml5b1dxl",
+        "away_team_name": "Bogland Ballers"
+    },
+    {
+        "period": 14,
+        "home_team_id": "g54vtpmkml5b1dxl",
+        "home_team_name": "DaFlow Titans",
+        "away_team_id": "f24u3nddml5b1dxm",
+        "away_team_name": "Rheinhessen Phantoms"
+    },
+    {
+        "period": 14,
+        "home_team_id": "nptbknm3ml5b1dxo",
+        "home_team_name": "Weinheim Cameleers",
+        "away_team_id": "ohuphg7rml5b1dxm",
+        "away_team_name": "Browller Beasts"
+    },
+    {
+        "period": 14,
+        "home_team_id": "xyc39avwml5b1dxm",
+        "home_team_name": "Alst\u00e4tte Vikings",
+        "away_team_id": "2euxspujml5b1dxn",
+        "away_team_name": "MichiSCowboyz"
+    },
+    {
+        "period": 14,
+        "home_team_id": "9iz2wyv5ml5b1dxo",
+        "home_team_name": "Mighty Mustaches",
+        "away_team_id": "kk4fsy6yml5b1dxn",
+        "away_team_name": "Mayence Millenials"
+    },
+    {
+        "period": 14,
+        "home_team_id": "u0sxyxewml5b1dxn",
+        "home_team_name": "Bielefeld Bluefyns",
+        "away_team_id": "qzy4n74dml5b1dxl",
+        "away_team_name": "Erdinger Elephants"
+    }
+]
