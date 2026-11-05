@@ -288,6 +288,17 @@ td.loss {
   white-space: nowrap;
 }
 
+.standings th,
+.standings td {
+  padding-block: 6px;
+}
+
+.team-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .bench-col {
   min-width: 260px;
 }
@@ -339,39 +350,357 @@ td.loss {
   }
 }
 
-/* matchups */
-.match-picker {
-  max-width: 360px;
-  margin-bottom: 20px;
+/* team logos sit inline next to the name */
+.logo {
+  display: inline-block;
+  flex: none;
+  vertical-align: middle;
+  object-fit: cover;
+  background: var(--panel);
+  border-radius: 4px;
+}
+
+.headline .logo {
+  margin-right: 4px;
+  border-radius: 6px;
+}
+
+.score-team .logo,
+.team-title .logo,
+.duel-team .logo {
+  margin-right: 4px;
+}
+
+/* shared: legend keys, flip badge */
+.legend-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 18px;
+}
+
+.flip-badge {
+  display: inline-block;
+  padding: 1px 8px;
+  color: var(--bg);
+  background: var(--regret);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* schedule: scoreboard cards */
+.week-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 24px;
+  margin-bottom: 12px;
+}
+
+.week-sum {
+  margin: 0;
+  color: var(--ink-dim);
+  font-size: 0.9375rem;
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 440px), 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.score-card {
+  position: relative;
+  display: block;
+  height: 100%;
+  padding: 10px 14px;
+  color: inherit;
+  text-decoration: none;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.score-card:hover {
+  border-color: var(--scored);
+}
+
+.score-card.is-flipped {
+  border-color: var(--regret);
+  box-shadow: inset 0 3px 0 var(--regret);
+}
+
+.score-card .flip-badge {
+  margin-top: 6px;
+}
+
+.score-row {
+  display: grid;
+  grid-template-columns: 1fr auto 76px;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 0;
+  color: var(--ink-dim);
+}
+
+.score-row + .score-row {
+  border-top: 1px solid var(--line);
+}
+
+.score-team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.score-team .logo {
+  margin-right: 0;
+}
+
+.score-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.score-actual {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.score-perfect {
+  color: var(--regret);
+  font-size: 0.9375rem;
+}
+
+.score-row.win {
+  color: var(--ink);
+}
+
+.score-row.win .score-team {
+  font-weight: 700;
+}
+
+.score-row.win .score-actual {
+  color: var(--ink);
+}
+
+/* matchups: picker, duel header, lineups */
+.match-list {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding-bottom: 4px;
+  overflow-x: auto;
+}
+
+.match-chip {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 0 16px;
+  color: var(--ink-dim);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+.match-chip:hover {
+  color: var(--ink);
+}
+
+.match-chip[aria-current="true"] {
+  color: var(--ink);
+  border-color: var(--scored);
+  box-shadow: inset 0 0 0 1px var(--scored);
+  font-weight: 700;
+}
+
+.chip-vs {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.flip-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--regret);
+  border-radius: 50%;
+}
+
+.duel {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.duel-side {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.duel-side:last-child {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.duel-team {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.duel-score {
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  font-stretch: 68%;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.duel-perfect {
+  color: var(--regret);
+  font-size: 0.9375rem;
+}
+
+.duel-vs {
+  color: var(--ink-dim);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.verdict {
+  margin: 12px 0 0;
+  color: var(--ink-dim);
+}
+
+.verdict.is-flipped {
+  color: var(--regret);
+  font-weight: 700;
 }
 
 .lineups {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 32px;
-  margin-top: 20px;
+  margin-top: 32px;
 }
 
 .team-title {
+  margin-bottom: 10px;
   font-size: 1.75rem;
 }
 
+.split-lg {
+  height: 20px;
+}
+
 .totals {
-  margin: 4px 0 12px;
+  margin: 8px 0 12px;
   color: var(--ink-dim);
 }
 
-.roster td.keep {
-  background: var(--win);
+.totals strong {
+  color: var(--ink);
 }
 
-.roster td.bad {
-  background: var(--loss);
+.callout {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  background: color-mix(in srgb, var(--regret) 14%, var(--bg));
+  border-left: 4px solid var(--regret);
+  border-radius: 0 var(--radius) var(--radius) 0;
 }
 
-.roster td.missed {
-  background: color-mix(in srgb, var(--regret) 22%, var(--bg));
+.callout-label {
+  display: block;
+  color: var(--regret);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.callout-ok {
+  background: var(--panel);
+  border-left-color: var(--scored);
+}
+
+.roster td.sit {
+  box-shadow: inset 4px 0 0 var(--loss);
+}
+
+.roster td.start {
+  background: color-mix(in srgb, var(--regret) 14%, var(--bg));
   box-shadow: inset 4px 0 0 var(--regret);
+}
+
+.perfect-lineup {
+  margin-top: 16px;
+}
+
+.perfect-lineup summary {
+  min-height: 40px;
+  padding: 8px 0;
+  color: var(--ink-dim);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.perfect-lineup .tag-bench {
+  margin-left: 8px;
+}
+
+.player {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 8px;
+}
+
+.player-pts {
+  color: var(--ink-dim);
+  font-size: 0.875rem;
+}
+
+.tag-bench {
+  color: var(--regret);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.same {
+  font-size: 0.875rem;
+}
+
+.gain {
+  color: var(--regret);
+  font-weight: 700;
+}
+
+.note {
+  margin: 8px 0 0;
+  color: var(--ink-dim);
+  font-size: 0.875rem;
 }
 
 @media (max-width: 640px) {
@@ -381,6 +710,15 @@ td.loss {
 
   .stepper input[type="range"] {
     width: 120px;
+  }
+
+  .lineups {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .duel {
+    padding: 16px 12px;
+    gap: 8px;
   }
 
   th,
@@ -402,16 +740,31 @@ td.loss {
   }
 
   .standings th:nth-child(1) {
-    width: 31%;
+    width: 40%;
   }
 
   .standings th:nth-child(2),
   .standings th:nth-child(3) {
-    width: 18%;
+    width: 16%;
   }
 
   .standings .team {
     white-space: normal;
+  }
+
+  /* phone: smaller logos, so the name keeps its own column next to them */
+  .standings .logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .team-cell {
+    gap: 8px;
+  }
+
+  .headline .logo {
+    width: 48px;
+    height: 48px;
   }
 
   .bench-col {

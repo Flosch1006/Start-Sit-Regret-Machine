@@ -26,6 +26,8 @@ export interface Team {
   name: string;
   shortName: string;
   emoji: string | null;
+  /** Fantrax team logo, absent for teams without one */
+  logo: string | null;
 }
 
 export interface Side {

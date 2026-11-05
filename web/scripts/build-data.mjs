@@ -68,7 +68,7 @@ for (const season of seasonNames) {
       .map((g) => ({ period: g.period, home: side(g.home_team_id, g.period), away: side(g.away_team_id, g.period) }));
 
     await writeJson(path.join(target, "league.json"), {
-      teams: teams.map((t) => ({ id: t.id, name: t.name, shortName: t.shortName, emoji: t.emoji ?? null })),
+      teams: teams.map((t) => ({ id: t.id, name: t.name, shortName: t.shortName, emoji: t.emoji ?? null, logo: t.logoUrl512 ?? null })),
       games,
     });
 

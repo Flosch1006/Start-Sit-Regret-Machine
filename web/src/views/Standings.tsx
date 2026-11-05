@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { TeamLogo } from "../components/TeamLogo";
 import { fmt } from "../lib/data";
 import { computeStandings } from "../lib/standings";
 import type { LeagueData } from "../lib/types";
@@ -10,7 +11,7 @@ interface Props {
 
 export function Standings({ data, week }: Props) {
   const rows = useMemo(() => computeStandings(data.games, week), [data.games, week]);
-  const emoji = useMemo(() => new Map(data.teams.map((t) => [t.name, t.emoji ?? ""])), [data.teams]);
+  const teams = useMemo(() => new Map(data.teams.map((t) => [t.name, t])), [data.teams]);
 
   if (rows.length === 0) {
     return <p className="empty">No games have been played in this league yet. Pick a later week.</p>;
@@ -25,7 +26,7 @@ export function Standings({ data, week }: Props) {
     <>
       <section aria-labelledby="headline">
         <h2 id="headline" className="headline">
-          {emoji.get(worst.team)} {worst.team} left {fmt(worst.deltaPerWeek)} points on the bench every week.
+          <TeamLogo team={teams.get(worst.team)} size={72} /> {worst.team} left {fmt(worst.deltaPerWeek)} points on the bench every week.
         </h2>
         <p className="lede">
           Together the league left {fmt(leagueTotal)} points unused through week {week}.
@@ -59,7 +60,10 @@ export function Standings({ data, week }: Props) {
               return (
                 <tr key={r.team}>
                   <th scope="row" className="team">
-                    <span aria-hidden="true">{emoji.get(r.team)}</span> {r.team}
+                    <span className="team-cell">
+                      <TeamLogo team={teams.get(r.team)} />
+                      <span>{r.team}</span>
+                    </span>
                   </th>
                   <td className="num">
                     {r.winPerfect}-{r.lossPerfect}
