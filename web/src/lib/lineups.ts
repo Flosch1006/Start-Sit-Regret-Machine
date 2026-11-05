@@ -1,29 +1,93 @@
 import type { RosterPlayer, Slot } from "./types";
 
-export interface Changes {
-  /** started, but not part of the perfect lineup; lowest scorer first */
-  sat: RosterPlayer[];
-  /** part of the perfect lineup, but did not start; highest scorer first */
-  started: RosterPlayer[];
-  /** points of the players who should have sat */
-  satPoints: number;
-  /** points of the players who should have started */
-  startedPoints: number;
+export interface Swap {
+  /** started, but not part of the perfect lineup */
+  sit: RosterPlayer;
+  /** part of the perfect lineup, but did not start */
+  start: RosterPlayer;
+  /** points the swap would have added */
+  gain: number;
+  /** lineup position where the swap happens, e.g. "SFX" or "DT" */
+  slot: string;
 }
 
-const sum = (players: RosterPlayer[]) => players.reduce((total, p) => total + p.points, 0);
+export interface Swaps {
+  swaps: Swap[];
+  /**
+   * Fantrax lists a two-way player (e.g. WR and CB) once per role, so a roster
+   * can have one more started row than there are players to bring in. The
+   * leftover rows are returned here so their points are not lost.
+   */
+  extras: RosterPlayer[];
+}
+
+const sameBody = (a: RosterPlayer, b: RosterPlayer) => a.player === b.player && a.team === b.team;
+
+/** Offense, defense and kicker never trade places; a two-way player belongs to two families. */
+const OFFENSE = ["QB", "RB", "WR", "TE", "RWT", "SFX", "QWRT"];
+function familiesOf(p: RosterPlayer): string[] {
+  if (p.positions.includes("K")) return ["kicker"];
+  const families: string[] = [];
+  if (p.positions.some((x) => OFFENSE.includes(x))) families.push("offense");
+  if (p.positions.some((x) => !OFFENSE.includes(x))) families.push("defense");
+  return families;
+}
+
+/** "RWT2" -> "RWT" */
+export const slotName = (slot: string) => slot.replace(/\d+$/, "");
 
 /**
- * Who has to leave the lineup and who has to come in to make it perfect.
- * The two lists are deliberately not paired: the perfect lineup shuffles
- * players between flex slots, so "A for B" would suggest swaps that nobody
- * could make. What is exact is the total: startedPoints - satPoints is the
- * number of points left on the bench.
+ * Pairs every player who should have sat with a player who should have started,
+ * the way a manager would swap them:
+ *  1. the perfect player of a slot replaces whoever really played that slot
+ *     (Heyward for Allen at DT);
+ *  2. every player left over replaces a leftover starter whose slot he is
+ *     eligible for, the best scorer first (Gainwell for Rodgers at SFX).
+ * The gains add up to exactly the points left on the bench.
  */
-export function buildChanges(roster: RosterPlayer[]): Changes {
-  const sat = roster.filter((p) => p.status === "Active" && p.perfect === null).sort((a, b) => a.points - b.points);
-  const started = roster.filter((p) => p.status !== "Active" && p.perfect !== null).sort((a, b) => b.points - a.points);
-  return { sat, started, satPoints: sum(sat), startedPoints: sum(started) };
+export function buildSwaps(roster: RosterPlayer[]): Swaps {
+  const outs = roster.filter((p) => p.status === "Active" && p.perfect === null).sort((a, b) => a.points - b.points);
+  const ins = roster.filter((p) => p.status !== "Active" && p.perfect !== null).sort((a, b) => b.points - a.points);
+
+  const extras: RosterPlayer[] = [];
+  const active = roster.filter((p) => p.status === "Active");
+  // surplus started rows: prefer the second role of a two-way player
+  while (outs.length > ins.length) {
+    const dup = outs.findIndex((o) => active.filter((p) => sameBody(p, o)).length > 1);
+    extras.push(...outs.splice(dup === -1 ? 0 : dup, 1));
+  }
+
+  const swaps: Swap[] = [];
+  const add = (sit: RosterPlayer, start: RosterPlayer, slot: string) =>
+    swaps.push({ sit, start, gain: start.points - sit.points, slot });
+
+  // 1. same slot
+  for (const start of [...ins]) {
+    const slot = slotName(start.perfect ?? "");
+    const at = outs.findIndex((o) => o.slot === slot);
+    if (at === -1) continue;
+    add(outs.splice(at, 1)[0], ins.splice(ins.indexOf(start), 1)[0], slot);
+  }
+
+  // 2. everyone left: the weakest starter first gets the best player who can fill his slot,
+  //    else the best player of his family (offense, defense, kicker)
+  for (const sit of [...outs]) {
+    const fillsSlot = (p: RosterPlayer) =>
+      sit.slot ? p.positions.includes(sit.slot) : p.positions.some((x) => sit.positions.includes(x));
+    const sameFamily = (p: RosterPlayer) => familiesOf(p).some((f) => familiesOf(sit).includes(f));
+    let at = ins.findIndex(fillsSlot);
+    const direct = at !== -1;
+    if (at === -1) at = ins.findIndex(sameFamily);
+    if (at === -1) at = 0;
+    const [start] = ins.splice(at, 1);
+    if (!start) break;
+    outs.splice(outs.indexOf(sit), 1);
+    // when he cannot play the slot of the starter, the swap happens where he plays in the perfect lineup
+    add(sit, start, direct && sit.slot ? sit.slot : slotName(start.perfect ?? ""));
+  }
+
+  swaps.sort((a, b) => b.gain - a.gain);
+  return { swaps, extras };
 }
 
 export interface PerfectRow {
@@ -42,11 +106,9 @@ export function perfectLineup(slots: Slot[], roster: RosterPlayer[]): PerfectRow
 }
 
 export function lineupTotals(roster: RosterPlayer[]) {
+  const sum = (players: RosterPlayer[]) => players.reduce((total, p) => total + p.points, 0);
   return {
     actual: sum(roster.filter((p) => p.status === "Active")),
     perfect: sum(roster.filter((p) => p.perfect !== null)),
   };
 }
-
-/** "RWT2" -> "RWT" */
-export const slotName = (slot: string) => slot.replace(/\d+$/, "");

@@ -644,55 +644,18 @@ td.loss {
   border-left-color: var(--scored);
 }
 
-/* who should have started / sat: two plain lists with a total each */
-.change {
-  margin-bottom: 12px;
-}
-
-.change-title {
-  padding: 8px 0 4px;
-  color: var(--ink);
-  font-size: 1.125rem;
-  font-stretch: 68%;
-  font-weight: 800;
-  text-align: left;
-}
-
-.change-start tbody td:first-child {
-  box-shadow: inset 4px 0 0 var(--regret);
-}
-
-.change-sit tbody td:first-child {
-  box-shadow: inset 4px 0 0 var(--loss);
-}
-
-.change-sit .slot-tag {
-  color: var(--ink);
-  background: var(--loss);
-}
-
-.change .slot-cell {
+/* swaps: start X for Y at a position */
+.swaps td.slot-cell {
   width: 1%;
   white-space: nowrap;
 }
 
-.change tfoot th,
-.change tfoot td {
-  border-bottom: 0;
-  font-weight: 700;
+.swaps td.start {
+  background: color-mix(in srgb, var(--regret) 14%, var(--bg));
 }
 
-.change-start tfoot td {
-  color: var(--regret);
-}
-
-.net {
-  margin: 4px 0 0;
-  font-size: 1.125rem;
-}
-
-.net strong {
-  color: var(--regret);
+.swaps td.sit {
+  color: var(--ink-dim);
 }
 
 .perfect-lineup {

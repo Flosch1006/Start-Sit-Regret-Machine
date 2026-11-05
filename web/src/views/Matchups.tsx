@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { TeamLogo } from "../components/TeamLogo";
 import { fmt, loadWeek } from "../lib/data";
-import { buildChanges, lineupTotals, perfectLineup, slotName } from "../lib/lineups";
+import { buildSwaps, lineupTotals, perfectLineup } from "../lib/lineups";
 import { actualWinner, flips, perfectWinner } from "../lib/results";
 import { useAsync } from "../lib/useAsync";
 import type { Game, LeagueData, LeagueMeta, RosterPlayer, Side, Team } from "../lib/types";
@@ -50,12 +50,12 @@ function TeamLineup({ side, roster, league, week, team }: LineupProps) {
     );
   }
 
-  const changes = buildChanges(roster);
+  const { swaps, extras } = buildSwaps(roster);
   const perfect = perfectLineup(league.slots, roster);
   const totals = lineupTotals(roster);
   const left = Math.max(0, totals.perfect - totals.actual);
   const scale = Math.max(totals.perfect, totals.actual, 1);
-  const best = changes.started[0];
+  const best = swaps[0];
 
   return (
     <section className="lineup" aria-label={side.name}>
@@ -72,38 +72,51 @@ function TeamLineup({ side, roster, league, week, team }: LineupProps) {
         <strong>{fmt(totals.actual)}</strong> scored · <strong>{fmt(left)}</strong> left on the bench
       </p>
 
-      {best ? (
+      {best && best.gain > 0 ? (
         <p className="callout">
-          <span className="callout-label">Biggest miss</span>
-          {best.player} ({pts(best)}) sat on the bench. In the perfect lineup he plays {slotName(best.perfect ?? "")}.
+          <span className="callout-label">Biggest miss · {best.slot}</span>
+          Start {best.start.player} ({pts(best.start)}) for {best.sit.player} ({pts(best.sit)}):{" "}
+          <strong>+{fmt(best.gain)}</strong>
         </p>
       ) : (
         <p className="callout callout-ok">A perfect lineup. Nothing to regret.</p>
       )}
 
-      {changes.started.length > 0 && (
-        <>
-          <ChangeTable
-            title="Should have started"
-            players={changes.started}
-            total={changes.startedPoints}
-            kind="start"
-            slotOf={(p) => slotName(p.perfect ?? "")}
-          />
-          <ChangeTable
-            title="Should have sat"
-            players={changes.sat}
-            total={changes.satPoints}
-            kind="sit"
-            slotOf={(p) => p.slot ?? undefined}
-          />
-          <p className="net">
-            Net <strong>+{fmt(left)}</strong> points
-          </p>
-          <p className="note">
-            Not paired one to one: the perfect lineup also moves players between flex slots.
-          </p>
-        </>
+      {swaps.length > 0 && (
+        <div className="table-wrap">
+          <table className="roster swaps">
+            <caption className="sr-only">Swaps that would have made {nickname(side.name)}'s lineup perfect</caption>
+            <thead>
+              <tr>
+                <th scope="col">At</th>
+                <th scope="col">Start</th>
+                <th scope="col">For</th>
+                <th scope="col" className="num">Gain</th>
+              </tr>
+            </thead>
+            <tbody>
+              {swaps.map((s, i) => (
+                <tr key={`${s.start.player}-${i}`}>
+                  <td className="slot-cell">
+                    <span className="slot-tag">{s.slot}</span>
+                  </td>
+                  <td className="start">
+                    <Player p={s.start} />
+                  </td>
+                  <td className="sit">
+                    <Player p={s.sit} />
+                  </td>
+                  <td className="num gain">{s.gain >= 0 ? `+${fmt(s.gain)}` : fmt(s.gain)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+      {extras.length > 0 && (
+        <p className="note">
+          Also counted for the second role of {extras.map((e) => `${e.player} (${pts(e)})`).join(", ")}.
+        </p>
       )}
 
       <details className="perfect-lineup">
@@ -134,42 +147,12 @@ function TeamLineup({ side, roster, league, week, team }: LineupProps) {
   );
 }
 
-function ChangeTable({
-  title,
-  players,
-  total,
-  kind,
-  slotOf,
-}: {
-  title: string;
-  players: RosterPlayer[];
-  total: number;
-  kind: "start" | "sit";
-  slotOf: (p: RosterPlayer) => string | undefined;
-}) {
+function Player({ p }: { p: RosterPlayer }) {
   return (
-    <div className="table-wrap">
-      <table className={`roster change change-${kind}`}>
-        <caption className="change-title">{title}</caption>
-        <tbody>
-          {players.map((p, i) => (
-            <tr key={`${p.player}-${i}`}>
-              <td className="slot-cell">
-                <span className="slot-tag">{slotOf(p) ?? ""}</span>
-              </td>
-              <td>{p.player}</td>
-              <td className="num player-pts">{pts(p)}</td>
-            </tr>
-          ))}
-        </tbody>
-        <tfoot>
-          <tr>
-            <th scope="row" colSpan={2}>Total</th>
-            <td className="num">{fmt(total)}</td>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
+    <span className="player">
+      <span className="player-name">{p.player}</span>
+      <span className="player-pts">{pts(p)}</span>
+    </span>
   );
 }
 
