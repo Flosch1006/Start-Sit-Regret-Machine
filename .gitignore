@@ -210,3 +210,4 @@ __marimo__/
 web/node_modules/
 web/dist/
 web/public/data/
+!web/src/lib/
