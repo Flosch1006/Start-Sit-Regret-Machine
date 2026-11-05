@@ -5,10 +5,11 @@
         "player": "A. Rodgers",
         "positions": [
             "SFX",
-            "QB",
-            "QWRT"
+            "QWRT",
+            "QB"
         ],
         "points": 18.55,
+        "slot": "QB",
         "perfect": "QB1"
     },
     {
@@ -17,11 +18,12 @@
         "player": "D. Henry",
         "positions": [
             "RB",
+            "QWRT",
             "RWT",
-            "SFX",
-            "QWRT"
+            "SFX"
         ],
         "points": 4.5,
+        "slot": "RB",
         "perfect": null
     },
     {
@@ -30,11 +32,12 @@
         "player": "B. Robinson",
         "positions": [
             "RB",
+            "QWRT",
             "RWT",
-            "SFX",
-            "QWRT"
+            "SFX"
         ],
         "points": 6.3,
+        "slot": "RB",
         "perfect": "RWT1"
     },
     {
@@ -42,12 +45,13 @@
         "team": "NE",
         "player": "A. Brown",
         "positions": [
-            "SFX",
             "WR",
+            "QWRT",
             "RWT",
-            "QWRT"
+            "SFX"
         ],
         "points": 4.2,
+        "slot": "WR",
         "perfect": "WR3"
     },
     {
@@ -55,12 +59,13 @@
         "team": "JAX",
         "player": "J. Meyers",
         "positions": [
-            "SFX",
             "WR",
+            "QWRT",
             "RWT",
-            "QWRT"
+            "SFX"
         ],
         "points": 10.8,
+        "slot": "WR",
         "perfect": "WR1"
     },
     {
@@ -68,12 +73,13 @@
         "team": "(N/A)",
         "player": "C. White",
         "positions": [
-            "SFX",
             "WR",
+            "QWRT",
             "RWT",
-            "QWRT"
+            "SFX"
         ],
         "points": 0.0,
+        "slot": "WR",
         "perfect": null
     },
     {
@@ -82,11 +88,12 @@
         "player": "A. Barner",
         "positions": [
             "TE",
+            "QWRT",
             "RWT",
-            "SFX",
-            "QWRT"
+            "SFX"
         ],
         "points": 4.6,
+        "slot": "TE",
         "perfect": null
     },
     {
@@ -95,11 +102,12 @@
         "player": "G. Kittle",
         "positions": [
             "TE",
+            "QWRT",
             "RWT",
-            "SFX",
-            "QWRT"
+            "SFX"
         ],
         "points": 17.9,
+        "slot": "TE",
         "perfect": "TE1"
     },
     {
@@ -108,11 +116,12 @@
         "player": "K. Vidal",
         "positions": [
             "RB",
+            "QWRT",
             "RWT",
-            "SFX",
-            "QWRT"
+            "SFX"
         ],
         "points": 5.5,
+        "slot": "RWT",
         "perfect": null
     },
     {
@@ -121,11 +130,12 @@
         "player": "K. Williams",
         "positions": [
             "RB",
+            "QWRT",
             "RWT",
-            "SFX",
-            "QWRT"
+            "SFX"
         ],
         "points": 8.2,
+        "slot": "RWT",
         "perfect": "RB2"
     },
     {
@@ -134,10 +144,11 @@
         "player": "D. Prescott",
         "positions": [
             "SFX",
-            "QB",
-            "QWRT"
+            "QWRT",
+            "QB"
         ],
         "points": 13.6,
+        "slot": "SFX",
         "perfect": "SFX1"
     },
     {
@@ -146,10 +157,11 @@
         "player": "T. Tagovailoa",
         "positions": [
             "SFX",
-            "QB",
-            "QWRT"
+            "QWRT",
+            "QB"
         ],
         "points": 0.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -158,11 +170,12 @@
         "player": "R. Davis",
         "positions": [
             "RB",
+            "QWRT",
             "RWT",
-            "SFX",
-            "QWRT"
+            "SFX"
         ],
         "points": 5.65,
+        "slot": null,
         "perfect": "RWT2"
     },
     {
@@ -171,11 +184,12 @@
         "player": "K. Gainwell",
         "positions": [
             "RB",
+            "QWRT",
             "RWT",
-            "SFX",
-            "QWRT"
+            "SFX"
         ],
         "points": 5.45,
+        "slot": null,
         "perfect": null
     },
     {
@@ -184,11 +198,12 @@
         "player": "A. Kamara",
         "positions": [
             "RB",
+            "QWRT",
             "RWT",
-            "SFX",
-            "QWRT"
+            "SFX"
         ],
         "points": 13.9,
+        "slot": null,
         "perfect": "RB1"
     },
     {
@@ -196,12 +211,13 @@
         "team": "WAS",
         "player": "T. Burks",
         "positions": [
-            "SFX",
             "WR",
+            "QWRT",
             "RWT",
-            "QWRT"
+            "SFX"
         ],
         "points": 8.6,
+        "slot": null,
         "perfect": "WR2"
     },
     {
@@ -209,12 +225,13 @@
         "team": "CIN",
         "player": "J. Chase",
         "positions": [
-            "SFX",
             "WR",
+            "QWRT",
             "RWT",
-            "QWRT"
+            "SFX"
         ],
         "points": 0.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -222,12 +239,13 @@
         "team": "CIN",
         "player": "D. Meyers",
         "positions": [
-            "SFX",
             "WR",
+            "QWRT",
             "RWT",
-            "QWRT"
+            "SFX"
         ],
         "points": 0.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -235,12 +253,13 @@
         "team": "DET",
         "player": "A. St. Brown",
         "positions": [
-            "SFX",
             "WR",
+            "QWRT",
             "RWT",
-            "QWRT"
+            "SFX"
         ],
         "points": 0.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -249,11 +268,12 @@
         "player": "E. Engram",
         "positions": [
             "TE",
+            "QWRT",
             "RWT",
-            "SFX",
-            "QWRT"
+            "SFX"
         ],
         "points": 3.3,
+        "slot": null,
         "perfect": null
     },
     {
@@ -262,11 +282,12 @@
         "player": "N. Fant",
         "positions": [
             "TE",
+            "QWRT",
             "RWT",
-            "SFX",
-            "QWRT"
+            "SFX"
         ],
         "points": 0.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -275,11 +296,12 @@
         "player": "D. Goedert",
         "positions": [
             "TE",
+            "QWRT",
             "RWT",
-            "SFX",
-            "QWRT"
+            "SFX"
         ],
         "points": 12.1,
+        "slot": null,
         "perfect": "TE2"
     },
     {
@@ -287,10 +309,11 @@
         "team": "DEN",
         "player": "Z. Allen",
         "positions": [
-            "DT",
-            "ID"
+            "ID",
+            "DT"
         ],
         "points": 22.35,
+        "slot": "DT",
         "perfect": "DT2"
     },
     {
@@ -298,10 +321,11 @@
         "team": "CHI",
         "player": "J. Simmons",
         "positions": [
-            "DT",
-            "ID"
+            "ID",
+            "DT"
         ],
         "points": 36.6,
+        "slot": "DT",
         "perfect": "DT1"
     },
     {
@@ -313,6 +337,7 @@
             "LB"
         ],
         "points": 11.0,
+        "slot": "LB",
         "perfect": "LB1"
     },
     {
@@ -324,6 +349,7 @@
             "LB"
         ],
         "points": 8.0,
+        "slot": "LB",
         "perfect": "LB2"
     },
     {
@@ -331,10 +357,11 @@
         "team": "BAL",
         "player": "T. Hendrickson",
         "positions": [
-            "ER",
-            "ID"
+            "ID",
+            "ER"
         ],
         "points": 10.1,
+        "slot": "ER",
         "perfect": null
     },
     {
@@ -342,10 +369,11 @@
         "team": "NE",
         "player": "G. Jacas",
         "positions": [
-            "ER",
-            "ID"
+            "ID",
+            "ER"
         ],
         "points": 4.0,
+        "slot": "ER",
         "perfect": null
     },
     {
@@ -353,11 +381,12 @@
         "team": "BUF",
         "player": "C. Benford",
         "positions": [
-            "DB",
             "CB",
-            "ID"
+            "ID",
+            "DB"
         ],
         "points": 10.5,
+        "slot": "CB",
         "perfect": "CB2"
     },
     {
@@ -365,11 +394,12 @@
         "team": "TB",
         "player": "Z. McCollum",
         "positions": [
-            "DB",
             "CB",
-            "ID"
+            "ID",
+            "DB"
         ],
         "points": 17.75,
+        "slot": "CB",
         "perfect": "CB1"
     },
     {
@@ -377,11 +407,12 @@
         "team": "SF",
         "player": "J. Brown",
         "positions": [
-            "DB",
+            "ID",
             "S",
-            "ID"
+            "DB"
         ],
         "points": 6.25,
+        "slot": "S",
         "perfect": "S2"
     },
     {
@@ -389,11 +420,12 @@
         "team": "IND",
         "player": "C. Bynum",
         "positions": [
-            "DB",
+            "ID",
             "S",
-            "ID"
+            "DB"
         ],
         "points": 13.1,
+        "slot": "S",
         "perfect": "S1"
     },
     {
@@ -401,10 +433,11 @@
         "team": "PIT",
         "player": "C. Heyward",
         "positions": [
-            "DT",
-            "ID"
+            "ID",
+            "DT"
         ],
         "points": 8.0,
+        "slot": "ID",
         "perfect": null
     },
     {
@@ -412,10 +445,11 @@
         "team": "LAR",
         "player": "A. Donald",
         "positions": [
-            "DT",
-            "ID"
+            "ID",
+            "DT"
         ],
         "points": 9.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -423,10 +457,11 @@
         "team": "KC",
         "player": "C. Jones",
         "positions": [
-            "DT",
-            "ID"
+            "ID",
+            "DT"
         ],
         "points": 8.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -434,10 +469,11 @@
         "team": "NO",
         "player": "C. Jordan",
         "positions": [
-            "DT",
-            "ID"
+            "ID",
+            "DT"
         ],
         "points": 7.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -449,6 +485,7 @@
             "LB"
         ],
         "points": 0.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -460,6 +497,7 @@
             "LB"
         ],
         "points": 4.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -471,6 +509,7 @@
             "LB"
         ],
         "points": 4.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -482,6 +521,7 @@
             "LB"
         ],
         "points": 0.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -489,10 +529,11 @@
         "team": "DAL",
         "player": "R. Gary",
         "positions": [
-            "ER",
-            "ID"
+            "ID",
+            "ER"
         ],
         "points": 4.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -500,10 +541,11 @@
         "team": "CIN",
         "player": "B. Mafe",
         "positions": [
-            "ER",
-            "ID"
+            "ID",
+            "ER"
         ],
         "points": 0.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -511,10 +553,11 @@
         "team": "WAS",
         "player": "J. Oweh",
         "positions": [
-            "ER",
-            "ID"
+            "ID",
+            "ER"
         ],
         "points": 12.3,
+        "slot": null,
         "perfect": "ER1"
     },
     {
@@ -522,10 +565,11 @@
         "team": "GB",
         "player": "L. Van Ness",
         "positions": [
-            "ER",
-            "ID"
+            "ID",
+            "ER"
         ],
         "points": 12.15,
+        "slot": null,
         "perfect": "ER2"
     },
     {
@@ -533,11 +577,12 @@
         "team": "BAL",
         "player": "M. Humphrey",
         "positions": [
-            "DB",
             "CB",
-            "ID"
+            "ID",
+            "DB"
         ],
         "points": 10.5,
+        "slot": null,
         "perfect": "ID1"
     },
     {
@@ -545,11 +590,12 @@
         "team": "SEA",
         "player": "J. Jobe",
         "positions": [
-            "DB",
             "CB",
-            "ID"
+            "ID",
+            "DB"
         ],
         "points": 5.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -557,11 +603,12 @@
         "team": "DET",
         "player": "D. Reed",
         "positions": [
-            "DB",
             "CB",
-            "ID"
+            "ID",
+            "DB"
         ],
         "points": 0.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -569,11 +616,12 @@
         "team": "DET",
         "player": "C. Clark",
         "positions": [
-            "DB",
+            "ID",
             "S",
-            "ID"
+            "DB"
         ],
         "points": 0.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -581,11 +629,12 @@
         "team": "JAX",
         "player": "E. Murray",
         "positions": [
-            "DB",
+            "ID",
             "S",
-            "ID"
+            "DB"
         ],
         "points": 5.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -593,11 +642,12 @@
         "team": "MIA",
         "player": "D. Trader",
         "positions": [
-            "DB",
+            "ID",
             "S",
-            "ID"
+            "DB"
         ],
         "points": 0.0,
+        "slot": null,
         "perfect": null
     },
     {
@@ -608,6 +658,7 @@
             "K"
         ],
         "points": 5.0,
+        "slot": "K",
         "perfect": "K1"
     },
     {
@@ -618,6 +669,7 @@
             "K"
         ],
         "points": 0.0,
+        "slot": null,
         "perfect": null
     }
 ]
