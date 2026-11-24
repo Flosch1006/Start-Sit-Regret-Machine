@@ -1,0 +1,86 @@
+[
+    {
+        "Team": "EDE",
+        "period": "Week 11",
+        "actual": 205.27,
+        "perfect": 278.39,
+        "delta": 73.12
+    },
+    {
+        "Team": "WEC",
+        "period": "Week 11",
+        "actual": 289.0,
+        "perfect": 324.48,
+        "delta": 35.48
+    },
+    {
+        "Team": "OWL",
+        "period": "Week 11",
+        "actual": 237.49,
+        "perfect": 259.82,
+        "delta": 22.33
+    },
+    {
+        "Team": "BRLR",
+        "period": "Week 11",
+        "actual": 245.3,
+        "perfect": 277.4,
+        "delta": 32.1
+    },
+    {
+        "Team": "DFT",
+        "period": "Week 11",
+        "actual": 324.82,
+        "perfect": 339.24,
+        "delta": 14.42
+    },
+    {
+        "Team": "RP",
+        "period": "Week 11",
+        "actual": 218.03,
+        "perfect": 238.87,
+        "delta": 20.84
+    },
+    {
+        "Team": "MaMi",
+        "period": "Week 11",
+        "actual": 213.44,
+        "perfect": 260.13,
+        "delta": 46.69
+    },
+    {
+        "Team": "BoBa",
+        "period": "Week 11",
+        "actual": 211.4,
+        "perfect": 284.7,
+        "delta": 73.3
+    },
+    {
+        "Team": "MiCo",
+        "period": "Week 11",
+        "actual": 270.31,
+        "perfect": 303.46,
+        "delta": 33.15
+    },
+    {
+        "Team": "Fyns",
+        "period": "Week 11",
+        "actual": 197.66,
+        "perfect": 236.88,
+        "delta": 39.22
+    },
+    {
+        "Team": "AlVi",
+        "period": "Week 11",
+        "actual": 292.28,
+        "perfect": 337.16,
+        "delta": 44.88
+    },
+    {
+        "Team": "MMs",
+        "period": "Week 11",
+        "actual": 223.65,
+        "perfect": 296.5,
+        "delta": 72.85
+    }
+]
